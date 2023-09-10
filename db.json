@@ -1,0 +1,53 @@
+{
+  "posts": [
+    {
+      "Name": "Futuredew",
+      "content": "Oil serum hybrid",
+      "Prod-img": "/Product-Page/Images/futureDue/glossier-futuredew-carousel-01.avif",
+      "actor": "/Product-Page/Images/futureDue/futuredew-2.avif",
+      "price": "$26"
+    },
+    {
+      "Name": "Balm Dotcom",
+      "content": "Universal Salve",
+      "Prod-img": "/Product-Page/Images/Balm-dotcom/glossier-bdc-wildfig-carousel-01.avif",
+      "actor": "/Product-Page/Images/Balm-dotcom/Hover.avif",
+      "price": "$14"
+    },
+    {
+      "Name": "Milky Jelly Cleanser",
+      "content": "Conditioning face wash",
+      "Prod-img": "/Product-Page/Images/Milkey-jelly-cleanser/hover.avif",
+      "actor": "/Product-Page/Images/futureDue/futuredew-2.avif",
+      "price": "$19"
+    },
+    {
+      "Name": "Cleanser Concentrate",
+      "content": "Clarifying face wash",
+      "Prod-img": "/Product-Page/Images/Cleanser-Concentrate/glossier-cleanser-concentrate-carousel-01.avif",
+      "actor": "/Product-Page/Images/Cleanser-Concentrate/hover.avif",
+      "price": "$21"
+    },
+    {
+      "Name": "Priming Moisturizer",
+      "content": "Buildable hydrating creme",
+      "Prod-img": "/Product-Page/Images/Priming-mosturiser/glossier-priming-moisturizer-carousel-01.avif",
+      "actor": "/Product-Page/Images/Priming-mosturiser/hover.avif",
+      "price": "$24"
+    },
+    {
+      "Name": "Priming Moisturizer Balance",
+      "content": "Oil-Control Gel Cream",
+      "Prod-img": "/Product-Page/Images/primaring-mosturizer-balance/glossier-priming-moisturizer-balance-carousel-01_4b6e0d57-d05e-46fc-8610-ab6201468c2c.avif",
+      "actor": "/Product-Page/Images/primaring-mosturizer-balance/hover.avif",
+      "price": "$25"
+    },
+    {
+      "Name": "Priming Moisturizer Rich",
+      "content": "Luxurious face cream",
+      "Prod-img": "/Product-Page/Images/priming-mosturizer-rich/glossier-priming-moisturizer-rich-carousel-01.avif",
+      "actor": "/Product-Page/Images/priming-mosturizer-rich/hover.avif",
+      "price": "$25"
+    }
+  ]
+}
