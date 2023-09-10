@@ -1,0 +1,95 @@
+{
+  "posts": [
+    {
+      "Name": "Futuredew",
+      "content": "Oil serum hybrid",
+      "Prod-img": "https://glossier-prod.imgix.net/products/glossier-futuredew-carousel-01.png?auto=compress,format&cs=srgb&w=360",
+      "actor": "https://glossier-prod.imgix.net/products/futuredew-2.jpg?auto=compress,format&cs=srgb&w=360",
+      "price": "$26"
+    },
+    {
+      "Name": "Balm Dotcom",
+      "content": "Universal Salve",
+      "Prod-img": "https://glossier-prod.imgix.net/products/glossier-bdc-wildfig-carousel-01.png?auto=compress,format&cs=srgb&w=360",
+      "actor": "https://glossier-prod.imgix.net/products/glossier-bdc-wildfig-carousel-02.png?auto=compress,format&cs=srgb&w=360",
+      "price": "$14"
+    },
+    {
+      "Name": "Milky Jelly Cleanser",
+      "content": "Conditioning face wash",
+      "Prod-img": "https://glossier-prod.imgix.net/products/glossier-mjc-carousel-01.png?auto=compress,format&cs=srgb&w=540",
+      "actor": "https://glossier-prod.imgix.net/products/glossier-mjc-carousel-02.png?auto=compress,format&cs=srgb&w=360",
+      "price": "$19"
+    },
+    {
+      "Name": "Cleanser Concentrate",
+      "content": "Clarifying face wash",
+      "Prod-img": "https://glossier-prod.imgix.net/products/glossier-cleanser-concentrate-carousel-01.png?auto=compress,format&cs=srgb&w=360",
+      "actor": "https://glossier-prod.imgix.net/products/glossier-cleanser-concentrate-carousel-02.png?auto=compress,format&cs=srgb&w=360",
+      "price": "$21"
+    },
+    {
+      "Name": "Priming Moisturizer",
+      "content": "Buildable hydrating creme",
+      "Prod-img": "https://glossier-prod.imgix.net/products/glossier-priming-moisturizer-carousel-01.png?auto=compress,format&cs=srgb&w=360",
+      "actor": "https://glossier-prod.imgix.net/products/glossier-priming-moisturizer-carousel-02.png?auto=compress,format&cs=srgb&w=360",
+      "price": "$24"
+    },
+    {
+      "Name": "Priming Moisturizer Balance",
+      "content": "Oil-Control Gel Cream",
+      "Prod-img": "https://glossier-prod.imgix.net/products/glossier-priming-moisturizer-balance-carousel-01_4b6e0d57-d05e-46fc-8610-ab6201468c2c.png?auto=compress,format&cs=srgb&w=360",
+      "actor": "https://glossier-prod.imgix.net/products/glossier-priming-moisturizer-balance-carousel-02.png?auto=compress,format&cs=srgb&w=360",
+      "price": "$25"
+    },
+    {
+      "Name": "Priming Moisturizer Rich",
+      "content": "Luxurious face cream",
+      "Prod-img": "https://glossier-prod.imgix.net/products/glossier-priming-moisturizer-rich-carousel-01.png?auto=compress,format&cs=srgb&w=360",
+      "actor": "https://glossier-prod.imgix.net/products/glossier-priming-moisturizer-rich-carousel-02.png?auto=compress,format&cs=srgb&w=360",
+      "price": "$35"
+    },
+    {
+      "Name": "Invisible Shield",
+      "content": "Daily sunscreen +",
+      "Prod-img": "https://glossier-prod.imgix.net/products/glossier-invisible-shield-carousel-01_f6471fa7-9197-4c39-8cec-00ab11b7691b.png?auto=compress,format&cs=srgb&w=360",
+      "actor": "https://glossier-prod.imgix.net/products/glossier-invisible-shield-carousel-02.png?auto=compress,format&cs=srgb&w=360",
+      "price": "$25"
+    },
+    {
+      "Name": "After Baume",
+      "content": "Moisture barrier recovery cream",
+      "Prod-img": "https://glossier-prod.imgix.net/products/glossier-after-baume-carousel-01_23fe78f1-1917-42e6-9448-b7f44e65acfc.png?auto=compress,format&cs=srgb&w=540",
+      "actor": "https://glossier-prod.imgix.net/products/glossier-after-baume-carousel-02.png?auto=compress,format&cs=srgb&w=360",
+      "price": "$28"
+    },
+    {
+      "Name": "Milky Jelly Cleanser + Futuredew",
+      "content": "Conditioning face wash + oil-serum hybrid",
+      "Prod-img": "https://glossier-prod.imgix.net/products/glossier-mjc-futuredew-carousel-01.png?auto=compress,format&cs=srgb&w=360",
+      "actor": "https://glossier-prod.imgix.net/products/glossier-mjc-futuredew-carousel-02.png?auto=compress,format&cs=srgb&w=360",
+      "price": "$41"
+    },
+    {
+      "Name": "Balm Dotcom Trio",
+      "content": "Choose three balms",
+      "Prod-img": "https://glossier-prod.imgix.net/products/glossier-bdctrio-carousel-01.png?auto=compress,format&cs=srgb&w=360",
+      "actor": "https://glossier-prod.imgix.net/products/glossier-bdctrio-carousel-02.png?auto=compress,format&cs=srgb&w=360",
+      "price": "$36"
+    },
+    {
+      "Name": "Solution",
+      "content": "Choose three balms",
+      "Prod-img": "https://glossier-prod.imgix.net/products/glossier-solution-carousel-01.png?auto=compress,format&cs=srgb&w=360",
+      "actor": "https://glossier-prod.imgix.net/products/glossier-solution-v2-02.png?auto=compress,format&cs=srgb&w=360",
+      "price": "$26"
+    },
+    {
+      "Name": "Super Glow",
+      "content": "Vitamin c + magnesium serum",
+      "Prod-img": "https://glossier-prod.imgix.net/products/glossier-super-glow-carousel-01_482fed4b-6f3e-4f9a-be79-8973e31e79b6.png?auto=compress,format&cs=srgb&w=360",
+      "actor": "https://glossier-prod.imgix.net/products/glossier-super-glow-carousel-02.png?auto=compress,format&cs=srgb&w=360",
+      "price": "$29"
+    }
+  ]
+}
