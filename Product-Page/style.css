@@ -1,0 +1,47 @@
+body {
+  letter-spacing: 0.5px;
+  font-family: Apercu, Gill Sans, sans-serif;
+  width: 97%;
+  margin: auto;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3%;
+}
+
+/* Image */
+.img-product {
+  width: 100%;
+  cursor: pointer;
+}
+
+.Name-Price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pName {
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+.pPrice {
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+.description {
+  font-size: 14px;
+  margin-top: 8px;
+  color: rgba(46, 46, 46, 0.623);
+}
+
+.Add-btn {
+  width: 100%;
+  padding: 3% 0;
+  border-top: none;
+  border-left: none;
+  cursor: pointer;
+}
