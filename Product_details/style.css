@@ -1,0 +1,213 @@
+body {
+  letter-spacing: 0.5px;
+  font-family: Apercu, Gill Sans, sans-serif;
+  width: 97%;
+  margin: auto;
+}
+
+/* //Container */
+
+.Heading > h1 {
+  font-size: 30px;
+  margin-bottom: 0;
+}
+.Heading > p {
+  color: rgba(24, 24, 24, 0.866);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.Btn > button {
+  font-family: Apercu, Gill Sans, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.001875em;
+  color: #000;
+  text-align: center;
+  padding: 0.6rem 1.8rem;
+  border-top: none;
+  border-left: none;
+  cursor: pointer;
+  margin-top: 18px;
+  margin-bottom: 7px;
+}
+
+.Btn > button:hover {
+}
+#Product-Imgaes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2%;
+}
+
+.AfterPay {
+  color: rgba(26, 25, 25, 0.838);
+}
+
+#Product-Imgaes > div > img {
+  max-width: 100%;
+}
+
+#Quality {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#Quality > p {
+  margin: 5px;
+  font-size: 20px;
+}
+
+#Description-heading > h4 {
+  font-size: 14px;
+  margin-bottom: 0;
+  margin-top: 40px;
+  color: rgba(5, 5, 5, 0.841);
+}
+
+.Description {
+  font-size: 14px;
+  width: 90%;
+  color: rgba(5, 5, 5, 0.841);
+}
+
+#Quantity {
+  color: rgba(120, 117, 117, 0.841);
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.tested {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(88, 85, 85, 0.8);
+}
+
+.model-detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.model-detail > span {
+  font-size: 15px;
+  margin-top: 10px;
+  color: rgb(32, 31, 31);
+}
+
+.model-detail > div > button {
+  color: #fff;
+  border-top: none;
+  border-left: none;
+  padding: 12px 16px;
+  margin-left: 5px;
+  color: black;
+}
+
+/* ----------------------------Container 2--------------------------- */
+
+#Container2,
+#Container4 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 45px;
+  margin-top: 6%;
+}
+
+#text2 > p {
+  width: 45%;
+  font-size: 30px;
+  /* font-weight: 600; */
+  line-height: 1.4;
+}
+
+#text2 > span {
+  font-size: 12px;
+  color: rgba(54, 53, 53, 0.674);
+  font-weight: 600;
+}
+
+#image2 > img,
+.Image4 > img {
+  width: 100%;
+  height: 95%;
+}
+
+.percent {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.percent_inside {
+  font-size: 30px;
+  margin-top: 10px;
+}
+.percent > div > p {
+  color: rgba(32, 32, 32, 0.804);
+}
+
+.SeeDetails {
+  font-size: 15px;
+  color: rgba(32, 32, 32, 0.804);
+}
+
+.hr {
+  width: 75%;
+}
+
+/* //---------------COntainer 4------------------------- */
+
+#text4 > div {
+  display: grid;
+  grid-template-columns: 5% 40%;
+}
+
+#text4 > div > p {
+  color: rgba(42, 42, 42, 0.91);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+#text4 > span,
+#container5 > span {
+  font-size: 12px;
+  color: rgba(54, 53, 53, 0.674);
+  font-weight: 600;
+}
+
+#text4 > p {
+  width: 90%;
+  font-size: 30px;
+  /* font-weight: 600; */
+  line-height: 1.4;
+}
+
+/* ------------------------Container 5-------------------- */
+
+#container5 {
+  margin-top: 6%;
+}
+#container5 > p {
+  font-size: 12px;
+  color: rgba(54, 53, 53, 0.674);
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+#container5 > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3%;
+}
+#container5 > div > div > p {
+  font-size: 15px;
+  color: rgba(5, 5, 5, 0.844);
+  
+  
+}
+
+#container5 > div > div > img {
+  width: 100%;
+}
+
+video {
+  pointer-events: none;
+}
