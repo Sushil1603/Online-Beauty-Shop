@@ -118,15 +118,15 @@ function DisplyData(data) {
     ImgCont.classList.add("Img-cont");
 
     //Image :-
-    let image = document.createElement("img");
-    image.classList.add("img-product");
-    image.src = element.ProdImg;
+    let img = document.createElement("img");
+    img.classList.add("img-product");
+    img.src = element.ProdImg;
     // Add event listener to change the image on hover
-    image.addEventListener("mouseover", () => {
-      image.src = element.actor;
+    img.addEventListener("mouseover", () => {
+      img.src = element.actor;
     });
-    image.addEventListener("mouseleave", () => {
-      image.src = element.ProdImg;
+    img.addEventListener("mouseleave", () => {
+      img.src = element.ProdImg;
     });
 
     //info:-
@@ -152,7 +152,7 @@ function DisplyData(data) {
     btn.classList.add("Add-btn");
     btn.innerText = "Add To Bag";
 
-    ImgCont.append(image);
+    ImgCont.append(img);
     name.append(pName, pPrice);
     info.append(name, des, btn);
     card.append(ImgCont, name, info);
