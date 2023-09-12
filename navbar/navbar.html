@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <h2>Glossier</h2>
+        </div>
+        <div class="middle">
+            <a href="#" class="nav-link" data-info="Discover our skincare products"><h4>SKINCARE</h4></a>
+            <!-- Add data-info attribute for tooltip content -->
+            <a href="#" class="nav-link" data-info="Explore our makeup products"><h4>MAKEUP</h4></a>
+            <a href="#" class="nav-link" data-info="View our balms collection"><h4>BALMS</h4></a>
+            <a href="#" class="nav-link" data-info="Shop our body care products"><h4>BODY</h4></a>
+            <a href="#" class="nav-link" data-info="Experience our fragrances"><h4>FRAGRANCE</h4></a>
+            <a href="#" class="nav-link" data-info="Browse Glossier goods"><h4>GLOSSIER GOODS</h4></a>
+            <a href="#" class="nav-link" data-info="Choose from our sets"><h4>SETS</h4></a>
+        </div>
+        <div class="right">
+            <a><h4>SEARCH</h4></a>
+            <a><h4>STORES</h4></a>
+            <a><h4>LOGIN</h4></a>
+            <a><h4>BAG <span id="bagCnt">(0)</span></h4></a>
+        </div>
+    </div>
+    
+    <script>
+        const leftSection = document.querySelector('.left h2');
+        leftSection.addEventListener('mouseenter', () => {
+            leftSection.textContent = 'YOU LOOK GOOD';
+        });
+        leftSection.addEventListener('mouseleave', () => {
+            leftSection.textContent = 'Glossier';
+        });
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
