@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 28.5%;
+    border: 2px solid rgb(0, 106, 39);
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 0.3px;
+}
+
+#cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 19px 5px 19px;
+    color: rgba(25, 24, 24, 0.907);
+    font-weight: lighter;
+}
+
+#product-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+
+}
+
+.crossIcon {
+    font-size: 30px;
+    margin: 0;
+    color: rgb(91, 102, 102) !important;
+    cursor: pointer;
+
+}
+
+.crossIcon:hover {
+    color: black;
+    font-weight: 600;
+}
+
+section {
+    width: 100%;
+    padding: 7px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 9px;
+}
+
+.card-content {
+    display: flex;
+    background-color: rgb(247, 247, 247);
+}
+
+.cardBody {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.cardBodyLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 18px 0px;
+}
+
+.cardBodyRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 18px 18px 18px 0px;
+}
+
+.cardImg img {
+    width: 140px;
+    height: 140px;
+    margin: auto;
+}
+
+.cart-btn {
+    display: flex;
+    border: 1px solid rgba(57, 53, 53, 0.827);
+    justify-content: space-around;
+    border-radius: 3px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+#checkout {
+    width: 28.4%;
+    border-top: 1px solid rgb(88, 78, 78) !important;
+    border: 2px solid red;
+    position: fixed;
+    bottom: 0;
+    padding: 30px;
+    background-color: white;
+
+}
+
+#checkout>div {
+    background-color: #3E4346;
+    color: white;
+    width: 100%;
+    margin: auto;
+}
+
+#checkout>div>p {
+
+    text-align: center;
+    padding: 15px;
+}
+
+#extra-products {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    /* width: inherit; */
+    margin: 0px 20px;
+}
+
+.extra-card {
+    padding: 2px;
+    box-shadow: rgba(165, 60, 60, 0.497) 2px 2px 2px 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.extra-card img {
+    width: 160px;
+}
+
+.extra-card button {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 0px;
+    background-color: rgba(160, 113, 156, 0.636);
+}
+
+.extra-card p {
+    text-align: center;
+}
+
+#emptyCartMsg{
+    height: 530px;
+    /* background-color: rgba(162, 177, 180, 0.608); */
+    padding: 20px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    background-image: url("https://img.icons8.com/ios/50/000000/happy--v1.png");
+    background-position: center;
+    background-size: 150px 150px;
+    background-repeat: no-repeat;
+    background-color: #f7f7f7;
+}

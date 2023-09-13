@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: yellow;
+        }
+
+        .box {
+            background-color: red;
+            width: 250px;
+            height: 250px;
+            position: relative;
+            animation-name: harry1;
+            animation-duration: 10s;
+            animation-iteration-count: unset;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+            
+        }
+
+        @keyframes harry1 {
+            from {
+                width: 200px;
+            }
+
+            to {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            This is a box
+        </div>
+    </div>
+</body>
+
+</html>
