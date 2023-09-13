@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    padding: 0;
+
+}
+#hero{
+    background-image: "./images/home-main/Glossier-MJCB-Launch-HP-Hero-image.avif";
+    border-color: brown;
+    width: 100%;
+    height: 100vh;
+    /* background-color: red; */
+}
+img{
+    width: 100%;
+}
