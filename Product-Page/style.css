@@ -1,11 +1,11 @@
 body {
   letter-spacing: 0.5px;
   font-family: Apercu, Gill Sans, sans-serif;
-  width: 97%;
-  margin: auto;
 }
 
 #container {
+  width: 97%;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3%;
@@ -44,4 +44,34 @@ body {
   border-top: none;
   border-left: none;
   cursor: pointer;
+}
+
+#sort_filter {
+  margin-bottom: 1.5%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(128, 128, 128, 0.245);
+}
+#sort_filter > #filter > p {
+  cursor: pointer;
+  font-size: 90%;
+  padding-left: 5px;
+}
+
+#filter {
+  display: flex;
+  gap: 13px;
+}
+
+#sort {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#filter_product,
+#sort_product {
+  padding: 6px 15px;
+  font-weight: bold;
+  color: rgba(128, 128, 128, 0.726);
 }
