@@ -1,5 +1,6 @@
 let data = [
   {
+    id: 1,
     Name: "Futuredew",
     content: "Oil serum hybrid",
     ProdImg:
@@ -8,6 +9,7 @@ let data = [
     price: 26,
   },
   {
+    id: 2,
     Name: "Balm-Dotcom",
     content: "Oil serum hybrid",
     ProdImg:
@@ -16,6 +18,7 @@ let data = [
     price: 26,
   },
   {
+    id: 3,
     Name: "Milkey Jelly Cleanser",
     content: "Universal Salve",
     ProdImg:
@@ -24,6 +27,7 @@ let data = [
     price: 14,
   },
   {
+    id: 4,
     Name: "Cleanser Concentrate",
     content: "Clarifying face wash",
     ProdImg:
@@ -33,6 +37,7 @@ let data = [
   },
 
   {
+    id: 5,
     Name: "Priming Moisturizer",
     content: "Buildable hydrating creme",
     ProdImg:
@@ -41,6 +46,7 @@ let data = [
     price: 24,
   },
   {
+    id: 6,
     Name: "Priming Moisturizer Balance",
     content: "Oil-Control Gel Cream",
     ProdImg:
@@ -49,6 +55,7 @@ let data = [
     price: 25,
   },
   {
+    id: 7,
     Name: "Priming Moisturizer Rich",
     content: "Luxurious face cream",
     ProdImg:
@@ -57,6 +64,7 @@ let data = [
     price: 35,
   },
   {
+    id: 8,
     Name: "Invisible Shield",
     content: "Daily sunscreen +",
     ProdImg:
@@ -65,6 +73,7 @@ let data = [
     price: 25,
   },
   {
+    id: 9,
     Name: "After Baume",
     content: "Moisture barrier recovery cream",
     ProdImg:
@@ -73,6 +82,7 @@ let data = [
     price: 28,
   },
   {
+    id: 10,
     Name: "Milky Jelly Cleanser + Futuredew",
     content: "Conditioning face wash + oil-serum hybrid",
     ProdImg: "/Product-Page/Images/Milky-Jelly/glossier-mjc-carousel-01.avif",
@@ -80,6 +90,7 @@ let data = [
     price: 41,
   },
   {
+    id: 11,
     Name: "Balm Dotcom Trio",
     content: "Choose three balms",
     ProdImg:
@@ -89,6 +100,7 @@ let data = [
     price: 36,
   },
   {
+    id: 12,
     Name: "Solution",
     content: "Choose three balms",
     ProdImg: "/Product-Page/Images/Solution/glossier-solution-carousel-01.avif",
@@ -96,6 +108,7 @@ let data = [
     price: 26,
   },
   {
+    id: 13,
     Name: "Super Glow",
     content: "Vitamin c + magnesium serum",
     ProdImg:
@@ -151,6 +164,12 @@ function DisplyData(data) {
     let btn = document.createElement("button");
     btn.classList.add("Add-btn");
     btn.innerText = "Add To Bag";
+    btn.addEventListener("click", () => {
+      let data = JSON.parse(localStorage.getItem("cart")) || [];
+      data.push(element);
+      localStorage.setItem("cart", JSON.stringify(data));
+      console.log(element);
+    });
 
     ImgCont.append(img);
     name.append(pName, pPrice);
@@ -158,7 +177,6 @@ function DisplyData(data) {
     card.append(ImgCont, name, info);
 
     container.append(card);
-    console.log("HELLO");
   });
 }
 
