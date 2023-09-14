@@ -44,7 +44,7 @@ function DisplyData(data) {
   data.forEach((element) => {
     //Card :-
     let card = document.createElement("div");
-    card.classList.add("card");
+    card.classList.add("card-div");
 
     //Imag Container :-
     let ImgCont = document.createElement("div");
@@ -52,7 +52,7 @@ function DisplyData(data) {
 
     //Image :-
     let img = document.createElement("img");
-    img.classList.add("img-product");
+    img.classList.add("img-product-details");
     img.src = element.ProdImg;
     // Add event listener to change the image on hover
     img.addEventListener("mouseover", () => {
@@ -67,22 +67,22 @@ function DisplyData(data) {
 
     //Name Price :-
     let name = document.createElement("div");
-    name.classList.add("Name-Price");
+    name.classList.add("Name-Price-details");
     let pName = document.createElement("p");
-    pName.classList.add("pName");
+    pName.classList.add("pName-details");
     pName.innerText = element.Name;
     let pPrice = document.createElement("p");
-    pPrice.classList.add("pPrice");
+    pPrice.classList.add("pPrice-details");
     pPrice.innerText = `$${element.price}`;
 
     //Description:-
     let des = document.createElement("p");
-    des.classList.add("description");
+    des.classList.add("description-details");
     des.innerText = element.content;
 
     //Button :-
     let btn = document.createElement("button");
-    btn.classList.add("Add-btn");
+    btn.classList.add("Add-btn-details");
     btn.innerText = "Add To Bag";
     btn.addEventListener("click", () => {
       let data = JSON.parse(localStorage.getItem("cart")) || [];
