@@ -45,3 +45,43 @@ body {
   border-left: none;
   cursor: pointer;
 }
+
+
+#sort_filter {
+  margin-bottom: 1.5%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(128, 128, 128, 0.245);
+}
+#sort_filter > #filter > p {
+  cursor: pointer;
+  font-size: 90%;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 4px;
+  color: black;
+}
+
+#sort_filter > #filter > p:hover {
+  background-color: black;
+  color: white;
+}
+
+#filter {
+  display: flex;
+  gap: 13px;
+}
+
+#sort {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#filter_product,
+#sort_product {
+  padding: 6px 15px;
+  font-weight: bold;
+  color: rgba(128, 128, 128, 0.726);
+}
+
