@@ -7,6 +7,28 @@
     <title>Document</title>
   </head>
   <body>
+    <div id="sort_filter">
+      <div id="filter">
+        <p id="all-products">All skincare</p>
+        <p id="cleanser">Cleansers</p>
+        <p id="balms">Balms</p>
+        <p id="treatment">Treatments</p>
+        <p id="sunscreen">Sunscreen</p>
+        <p id="Moisturizer">Moisturizers</p>
+      </div>
+      <div id="sort">
+        <select name="Filter" id="filter_product">
+          <option value="Dry">Dry</option>
+          <option value="Oily">Oliy Skin</option>
+          <option value="Normal">Normal Skin</option>
+        </select>
+        <select name="Sort" id="sort_product">
+          <option value="LTH">Price (Low to High)</option>
+          <option value="HTL">Price (High to Low)</option>
+          <option value="Alpha">Alphabetically</option>
+        </select>
+      </div>
+    </div>
     <div>
       <div id="container"></div>
     </div>
