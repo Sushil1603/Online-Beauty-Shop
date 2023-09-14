@@ -1,11 +1,11 @@
 body {
   letter-spacing: 0.5px;
   font-family: Apercu, Gill Sans, sans-serif;
+  width: 97%;
+  margin: auto;
 }
 
 #container {
-  width: 97%;
-  margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3%;
@@ -46,6 +46,7 @@ body {
   cursor: pointer;
 }
 
+
 #sort_filter {
   margin-bottom: 1.5%;
   display: flex;
@@ -83,3 +84,4 @@ body {
   font-weight: bold;
   color: rgba(128, 128, 128, 0.726);
 }
+
