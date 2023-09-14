@@ -55,7 +55,15 @@ body {
 #sort_filter > #filter > p {
   cursor: pointer;
   font-size: 90%;
-  padding-left: 5px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 4px;
+  color: black;
+}
+
+#sort_filter > #filter > p:hover {
+  background-color: black;
+  color: white;
 }
 
 #filter {

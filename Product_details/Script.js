@@ -1,0 +1,102 @@
+var video = document.getElementById("myVideo");
+
+video.addEventListener("pause", function (e) {
+  e.preventDefault();
+  video.play();
+});
+
+let data = [
+  {
+    id: 1,
+    Name: "Futuredew",
+    content: "Oil serum hybrid",
+    ProdImg:
+      "/Product-Page/Images/futureDue/glossier-futuredew-carousel-01.avif",
+    actor: "/Product-Page/Images/futureDue/futuredew-2.avif",
+    price: 26,
+    type: "treatment",
+  },
+  {
+    id: 2,
+    Name: "Balm-Dotcom",
+    content: "Oil serum hybrid",
+    ProdImg:
+      "/Product-Page/Images/Balm-dotcom/glossier-bdc-wildfig-carousel-01.avif",
+    actor: "/Product-Page/Images/Balm-dotcom/Hover.avif",
+    price: 26,
+    type: "balm",
+  },
+  {
+    id: 3,
+    Name: "Milkey Jelly Cleanser",
+    content: "Universal Salve",
+    ProdImg:
+      "/Product-Page/Images/Milkey-jelly-cleanser/glossier-mjc-futuredew-carousel-01.avif",
+    actor: "/Product-Page/Images/Milkey-jelly-cleanser/hover.avif",
+    price: 14,
+    type: "Cleanser",
+  },
+];
+
+let container = document.querySelector("#container");
+
+function DisplyData(data) {
+  data.forEach((element) => {
+    //Card :-
+    let card = document.createElement("div");
+    card.classList.add("card");
+
+    //Imag Container :-
+    let ImgCont = document.createElement("div");
+    ImgCont.classList.add("Img-cont");
+
+    //Image :-
+    let img = document.createElement("img");
+    img.classList.add("img-product");
+    img.src = element.ProdImg;
+    // Add event listener to change the image on hover
+    img.addEventListener("mouseover", () => {
+      img.src = element.actor;
+    });
+    img.addEventListener("mouseleave", () => {
+      img.src = element.ProdImg;
+    });
+
+    //info:-
+    let info = document.createElement("div");
+
+    //Name Price :-
+    let name = document.createElement("div");
+    name.classList.add("Name-Price");
+    let pName = document.createElement("p");
+    pName.classList.add("pName");
+    pName.innerText = element.Name;
+    let pPrice = document.createElement("p");
+    pPrice.classList.add("pPrice");
+    pPrice.innerText = `$${element.price}`;
+
+    //Description:-
+    let des = document.createElement("p");
+    des.classList.add("description");
+    des.innerText = element.content;
+
+    //Button :-
+    let btn = document.createElement("button");
+    btn.classList.add("Add-btn");
+    btn.innerText = "Add To Bag";
+    btn.addEventListener("click", () => {
+      let data = JSON.parse(localStorage.getItem("cart")) || [];
+      data.push(element);
+      localStorage.setItem("cart", JSON.stringify(data));
+    });
+
+    ImgCont.append(img);
+    name.append(pName, pPrice);
+    info.append(name, des, btn);
+    card.append(ImgCont, name, info);
+
+    container.append(card);
+  });
+}
+
+DisplyData(data);
