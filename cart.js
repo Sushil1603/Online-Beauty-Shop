@@ -128,7 +128,7 @@ let data = [
 let productContainer = document.getElementById("product-list-container")
 
 let totalCartProducts = document.getElementById("totalItem")
-
+let totalPriceHTMl = document.getElementById("totalPrice");
 let cartArr = JSON.parse(localStorage.getItem("cartArr")) || [];
 let shippingChargMsg = document.getElementById("shippingCharges");
 // let decreaseQuantity = document.getElementById("decrease");
@@ -170,8 +170,8 @@ function getData() {
 getData();
 function displayData(data) {
     productContainer.innerHTML = "";
-    data.forEach((element) => {
-        
+    data.forEach((element, index) => {
+
         let card = document.createElement("div");
         card.className = "card";
 
@@ -181,6 +181,13 @@ function displayData(data) {
         p.innerHTML = `&times;`
         crossIcon.append(p);
 
+        crossIcon.addEventListener("click", () => {
+            cartProductArr.splice(index, 1);
+            totalPrice = totalPrice - Number(element.price)
+            totalPriceHTMl.textContent = totalPrice;
+            shipping();
+            displayData(cartProductArr);
+        })
         let cardContent = document.createElement("div")
         cardContent.className = "card-content";
         cardContent.style.width = "100%"
@@ -208,14 +215,25 @@ function displayData(data) {
         decrease.classList.add("decrease", "pointer");
         decrease.innerHTML = "&#8722;";
 
-        decrease.addEventListener("click", ()=>{
-            if(element.quantity>1){
+        decrease.addEventListener("click", () => {
+            if (element.quantity > 1) {
                 element.quantity--;
                 element.totalPrice -= element.price;
+                totalPrice = totalPrice - Number(element.price)
                 
                 displayData(cartProductArr);
+                shipping();
             }
-           
+            else {
+                cartProductArr.splice(index, 1);
+
+                
+                totalPrice = totalPrice - Number(element.price)
+                totalPriceHTMl.textContent = totalPrice;
+                displayData(cartProductArr);
+                shipping();
+            }
+
         })
 
         let noOfProducts = document.createElement("span")
@@ -229,7 +247,9 @@ function displayData(data) {
         increase.addEventListener("click", () => {
             element.quantity++;
             element.totalPrice += element.price;
-            
+            totalPrice = totalPrice + Number(element.price)
+            totalPriceHTMl.textContent = totalPrice;
+            shipping();
             displayData(cartProductArr);
         })
 
@@ -267,18 +287,21 @@ else {
 }
 
 totalPrice = cartProductArr.reduce((acc, currentElement) => {
-    return acc += Number(currentElement.totalPriceprice) ;
+    return acc += Number(currentElement.totalPrice);
 }, 0)
 
-if (totalPrice > 40) {
-    shippingCharges = 0;
+function shipping() {
+    if (totalPrice > 40) {
+        shippingCharges = 0;
+    }
+    else {
+        shippingCharges = 40 - totalPrice;
+        shippingChargMsg.textContent = `$${shippingCharges} away from free standard shipping`
+    }
 }
-else {
-    shippingCharges = 40 - totalPrice;
-    shippingChargMsg.textContent = `$${shippingCharges} away from free standard shipping`
-}
+shipping();
 
-let totalPriceHTMl = document.getElementById("totalPrice");
+
 totalPriceHTMl.textContent = totalPrice;
 
 
