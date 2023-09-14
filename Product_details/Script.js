@@ -43,8 +43,8 @@ let container = document.querySelector("#container");
 function DisplyData(data) {
   data.forEach((element) => {
     //Card :-
-    let card = document.createElement("div");
-    card.classList.add("card-div");
+    let cardi = document.createElement("div");
+    cardi.classList.add("card-div");
 
     //Imag Container :-
     let ImgCont = document.createElement("div");
@@ -93,9 +93,9 @@ function DisplyData(data) {
     ImgCont.append(img);
     name.append(pName, pPrice);
     info.append(name, des, btn);
-    card.append(ImgCont, name, info);
+    cardi.append(ImgCont, name, info);
 
-    container.append(card);
+    container.append(cardi);
   });
 }
 
