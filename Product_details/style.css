@@ -40,6 +40,10 @@ body {
   background-color: black;
 }
 
+.Main-Img > img {
+  width: 100%;
+}
+
 #quan {
   width: 8%;
   padding: 8px 0;
@@ -183,4 +187,73 @@ body {
 
 #main-conta {
   margin-left: 25%;
+}
+/* ---------- */
+
+/* ------------580px-------------- */
+
+@media screen and (max-width: 580px) {
+ 
+  #Main-section > div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+  }
+  .Main-Img > img {
+    width: 80%;
+    margin: auto;
+  }
+
+  .Description_Main > h1 {
+    font-size: 25px;
+  }
+
+  .Main-des {
+    width: 100%;
+    display: flex;
+    margin-top: 3%;
+  }
+  .Description_Main > h3 {
+    font-size: 18px;
+    color: rgba(15, 15, 15, 0.663);
+  }
+
+  #Quan-Inc {
+    display: flex;
+  }
+
+  #add_to_cart {
+    padding: 4px 50px;
+    color: white;
+    background-color: black;
+  }
+
+  #Quan-Inc > span > button {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+  .Description_Main > h3 ~ p {
+    font-size: 15px;
+    color: rgba(15, 15, 15, 0.663);
+  }
+  #special-des > .text {
+    
+    color: rgba(0, 0, 0, 0.803);
+    font-size: 10px;
+  }
+
+  #special-section {
+    display: block;
+  }
+  #special-des {
+    width: 100%;
+    margin-left: 4%;
+  }
+
+  #Main{
+    overflow: hidden;
+  }
 }
