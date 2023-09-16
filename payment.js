@@ -148,4 +148,5 @@ var totalPrice = 0;
 dataFromCart.forEach(function(product) {
     totalPrice += (+product.desc);
   });
+  localStorage.setItem("finalPrice", totalPrice);
 document.querySelector("#Grand_total").innerHTML = "₹ " + totalPrice;

@@ -296,20 +296,20 @@ hr{
 
                <div id="cards">
                 
-                 <div id="cash"> <p style="margin-top: 10px;">Cash on Delivery</p>
+                 <div id="cash"  > <p style="margin-top: 10px;">Cash on Delivery</p>
                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEPNq1nohtIBvsiwK6FCvA2WNAQC496_qbgA&usqp=CAU" alt=""></div>
 
-                 <div id ="credit"><p style="margin-top: 10px;">Pay via Card</p>
+                 <div id ="credit" ><p style="margin-top: 10px;">Pay via Card</p>
                  <img src="./Assets/debitCards.png" alt=""></div>
 
-                 <div class="black1"  ><p style="margin-top: 10px;">Pay via Wallets</p>
+                 <div class="black1" onclick="showcash()" ><p style="margin-top: 10px;">Pay via Wallets</p>
                 <a href=""><img style="margin-top: -5px;" src="./Assets/phonepay.png" alt=""></a></div>
 
-                 <div class="black"><p style="margin-top: 10px;">Pay via Netbanking</p>
+                 <div class="black" onclick="showcash()"><p style="margin-top: 10px;">Pay via Netbanking</p>
                     <img  style="width: 30px; height: 30px; margin:9px;margin-top: 1px; " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc2JEoE2aoBRZ6Z31JKh7U_bEhRR5iaipLCQ&usqp=CAU" alt="">
                  </div>
 
-                 <div id="green"> <p>Pay with UPI</p>
+                  <div id="green" onclick="showcash()"> <p>Pay with UPI</p>
                     <svg style="margin-left: 19px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="70" height="27.575757575757578" viewBox="0 0 66 26" style="enable-background:new 0 0 66 26;" xml:space="preserve">
                         <style type="text/css">
                             .st0{fill:#FEF5F4;stroke:#EAEAEA;}
@@ -451,7 +451,7 @@ hr{
                          <path d="M3.66693 6.86462H14.3336" stroke="#039855" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                          <path d="M22.3332 6.86462H27.6666C30.6132 6.86462 32.9999 9.2513 32.9999 12.198V19.398H26.3332" stroke="#039855" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                          </svg>
-                     <p>Earliest Delivery by 6 Jun, 9 AM</p>
+                     <p>Earliest Delivery by 20 sep, 9 AM</p>
                      <!-- <button id="rzp-button1"></button> -->
                  </div>
 
@@ -486,7 +486,7 @@ document.querySelector("#credit").addEventListener("click", showcredit);
 
        var div = document.createElement("div");   
        div.setAttribute("id", "credit_D");
-       div.style.height = "180px";
+       div.style.height = "100px";
        div.style.width = "296px";
        div.style.padding = "1px";
        div.style.backgroundColor = "white";
@@ -496,51 +496,51 @@ document.querySelector("#credit").addEventListener("click", showcredit);
         //creating h4 tag
        var h4 =document.createElement("h4");        
        h4.setAttribute("id", "credit_h4");
-       h4.textContent = " Card Details";
-       h4.style.fontSize = "15px";
+       h4.textContent = "Pay with Razor pay ";
+       h4.style.fontSize = "20px";
        h4.style.marginTop = "7px";
-       h4.style.marginLeft= "90px";
+       h4.style.marginLeft= "40px";
 
     //-------------------------------------------------------------creating input for card number taG-----------------------------------------------------------------------------------------------------------
-       var card_Number = document.createElement("input");        
-       card_Number.setAttribute("id", "credit_card_number");
-       card_Number.setAttribute("placeholder", "Card Number");
-       card_Number.style.backgroundColor = "rgb(243, 244, 245)";
-       card_Number.style.border = "rgb(243, 244, 245)";
-       card_Number.style.padding = "7px";
-       card_Number.style.marginLeft = "7px";
-       card_Number.style.marginBottom = "2px";
+    //    var card_Number = document.createElement("input");        
+    //    card_Number.setAttribute("id", "credit_card_number");
+    //    card_Number.setAttribute("placeholder", "Card Number");
+    //    card_Number.style.backgroundColor = "rgb(243, 244, 245)";
+    //    card_Number.style.border = "rgb(243, 244, 245)";
+    //    card_Number.style.padding = "7px";
+    //    card_Number.style.marginLeft = "7px";
+    //    card_Number.style.marginBottom = "2px";
        
       
 
-       var div2 = document.createElement("div");
-       div2.setAttribute("id", "credit_ex_&_cvv");
-       div2.style.marginBottom = "28px"
+    //    var div2 = document.createElement("div");
+    //    div2.setAttribute("id", "credit_ex_&_cvv");
+    //    div2.style.marginBottom = "28px"
 
-    //----------------------------------------------------------creating input for card Expiry tag--------------------------------------------------------------------------------------------------------------------
-       var card_ex = document.createElement("input");       
-       card_ex.setAttribute("id", "credit_card_ex");
-       card_ex.setAttribute("placeholder", "Expiry(MM/YY)");
-       card_ex.style.backgroundColor = "rgb(243, 244, 245)";
-       card_ex.style.border = "rgb(243, 244, 245)";
-       card_ex.style.padding = "7px";
-       card_ex.style.margin = "5px";
+    // //----------------------------------------------------------creating input for card Expiry tag--------------------------------------------------------------------------------------------------------------------
+    //    var card_ex = document.createElement("input");       
+    //    card_ex.setAttribute("id", "credit_card_ex");
+    //    card_ex.setAttribute("placeholder", "Expiry(MM/YY)");
+    //    card_ex.style.backgroundColor = "rgb(243, 244, 245)";
+    //    card_ex.style.border = "rgb(243, 244, 245)";
+    //    card_ex.style.padding = "7px";
+    //    card_ex.style.margin = "5px";
       
-    //----------------------------------------------------------creating input for card cvv tag-------------------------------------------------------------------------------------------------------- 
-       var card_cvv = document.createElement("input");      
-       card_cvv.setAttribute("id", "credit_card_cvv");
-       card_cvv.setAttribute("placeholder", "CVV");
-       card_cvv.style.backgroundColor = "rgb(243, 244, 245)";
-       card_cvv.style.border = "rgb(243, 244, 245)";
-       card_cvv.style.width = "50px";
-       card_cvv.style.margin = "5px";
+    // //----------------------------------------------------------creating input for card cvv tag-------------------------------------------------------------------------------------------------------- 
+    //    var card_cvv = document.createElement("input");      
+    //    card_cvv.setAttribute("id", "credit_card_cvv");
+    //    card_cvv.setAttribute("placeholder", "CVV");
+    //    card_cvv.style.backgroundColor = "rgb(243, 244, 245)";
+    //    card_cvv.style.border = "rgb(243, 244, 245)";
+    //    card_cvv.style.width = "50px";
+    //    card_cvv.style.margin = "5px";
       
        
         //-------------------------------------------------------creating button with anchor tag--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
        var card_button = document.createElement("a");           
        card_button.setAttribute("id", "credit_card_button");
-       card_button.textContent ="Confirm Order";
-       card_button.setAttribute("href", "orderDone.html");    
+       card_button.textContent ="Confirm ";
+    //    card_button.setAttribute("href", "orderDone.html");    
        card_button.style.backgroundColor = "black";
        card_button.style.textDecoration = "none";
        card_button.style.padding = "9px";   
@@ -552,8 +552,9 @@ document.querySelector("#credit").addEventListener("click", showcredit);
     
       
         // appending  
-        div2.append(card_ex,card_cvv);       
-        div.append(h4,card_Number,div2,card_button);
+        // div2.append(card_ex,card_cvv);       
+        // div.append(h4,card_Number,div2,card_button);
+        div.append(h4,card_button);
         document.querySelector("#display_Add").append(div);        
     }
 
@@ -577,7 +578,7 @@ document.querySelector("#credit").addEventListener("click", showcredit);
        // --------------------------------------------------------------creating h4 tag-------------------------------------------------------------------------------------------------------------------------------------------------------------
        var h4 =document.createElement("h4");       
        h4.setAttribute("id", "cash_h4");
-       h4.textContent = "Pay At Your Door Step";
+       h4.textContent = "Pay with razor pay ";
        h4.style.fontSize = "18px";
        h4.style.marginLeft = "50px";
 
@@ -603,7 +604,7 @@ document.querySelector("#credit").addEventListener("click", showcredit);
     var NumberofItems = localStorage.getItem("cart");
 
 
-  localStorage.setItem("finalPrice", 500);
+//   localStorage.setItem("finalPrice", 500);
 </script>
 
 
@@ -633,7 +634,8 @@ document.querySelector("#credit").addEventListener("click", showcredit);
             alert(response.razorpay_payment_id);
             // alert(response.razorpay_order_id);
             // alert(response.razorpay_signature)
-            window.assign('index.html');
+            window.location.href = 'index.html';
+            console.log("done")
         }
     };
     var rzp1 = new Razorpay(options);
