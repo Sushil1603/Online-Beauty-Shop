@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>address page</title>
+</head>
+<style>
+  *{
+    font-family: sans-serif;
+}
+#layout{
+    position: fixed;
+   width: 100vw;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, 0.5);
+   z-index: 99;
+   top: 0;
+   left: 0;
+}
+#mainbox{
+    display: flex;
+    height: 500px;
+    background-color: white;
+    border-radius: 30px;
+    position: fixed;
+    z-index: 100;
+    width: 900px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 30px 6px;
+    margin: 100px 260px;
+}
+#nav1{
+    margin: 20px;
+}
+
+#nav2{
+   display: flex;
+   
+}
+h5{
+    margin-top: 1px;
+    margin-left: 10px;
+}
+#nav2 div p{
+    margin-top: 1px;
+    margin-left: 12px;
+    font-size: 15px;
+    color: rgb(10, 118, 10);
+}
+#add_display{
+    width: 95%;
+    height: 18%;
+    border: 1.5px solid rgb(212, 207, 207);
+    margin-top: -5px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 15px;
+    width: 90%;
+   
+}
+h2{
+    font-weight: lighter;
+    color: rgb(33, 33, 83);
+    font-size: 20px;
+}
+
+#plus{
+    display: flex;
+    margin-top: -16px;
+}
+
+#conti{
+ width:50% ;
+ height: 11%;
+ border-radius: 10px;
+ background-color: #000000;
+ color: white;
+ border: black;
+ margin-left: 120px;
+ font-size: larger;
+ margin-top: -5px;
+ cursor: pointer;
+}
+hr{
+    margin-top: -10px;
+}
+
+#footer{
+    display: flex;
+    margin-top: 10px;
+}
+#footer p{
+    font-size: x-small;
+}
+#footer svg{
+    margin-top: 7px;
+}
+
+#right_box{
+  background-color: rgb(239, 239, 239);
+  width: 55%; 
+  height: 100%;
+ 
+}
+#order_sum{
+    display: flex;
+    height: 60px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+#order_sum img{
+    width: 30px;
+    margin: 15px;
+    
+}
+#order_sum p{
+    margin-top: 19px;
+    color: rgb(63, 63, 63);
+}
+
+#order_sum svg{
+    margin-top: 16px;
+    margin-left: 10px;
+   
+}
+
+#orderInfo{
+    height: 120px;
+    border-radius: 10px;
+    margin: 20px;
+    background-color: white;
+}
+#truck{
+    display: flex;
+    margin: 20px;
+    padding:15px 29px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#truck p{
+    color: green;
+    font-size: 13px;
+    margin-left:25px;
+    margin-top: 5px;
+}
+#turck svg{
+   
+}
+#right_box{
+    border-radius: 30px;
+}
+form{
+    border-radius: 20px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(1fr,1);
+    width: 340px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+   
+}
+
+form h2{
+    color: #000000;
+}
+form input{
+    background: rgb(243, 244, 245);
+    border-width: 0px 0px 1px;
+    border-radius: 8px;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 4px;
+    padding: 3px;
+}
+form #in6{
+    padding: 10px 12px 5px;
+    height: 60px;
+}
+form button{
+    padding: 5px;
+    border-style: solid;
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: 200;
+    border-color:  #080808;
+    background-color: #090a0a;
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: -5px;
+    width: 50%;
+    margin-left: 70px;
+}
+
+.add{
+    font-size: 15px;
+}
+
+@media only screen and (max-width:800px){
+
+    #footer,#order_sum{
+        display: none;
+    }
+    #mainbox{
+        width: 500px;
+        height: 1000px;
+        flex-direction: column;
+        margin-left: 13%;
+        padding-left: 50px;
+    }
+
+    #display_Add{
+        margin-bottom: 3%;
+        border:1px solid rgb(207, 202, 202);
+    }
+    #right_box{
+        margin-top: 10%;
+        background-color: white;
+        margin-right: 20%;
+    }
+    #plus, #bag,#truck,#price{
+        margin-left: 29%;
+    }
+    
+    #plus{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+   
+    #layout, #mainbox{
+        position: static;
+    }
+    #layout, #right_box{
+        background-color: white;
+    }
+    
+   
+   
+}
+
+</style>
+<body>
+    
+    <div  id="layout">
+        <div id="mainbox">
+            <div id="left_box" style=" margin-left: 20px; width: 75%; height: 100%;">
+                <div id="nav1"> 
+                    <!-- <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Group_205728" data-name="Group 205728" width="70.848" height="29.101018492176387" viewBox="0 0 151.848 62.372">
+                        <g id="Group_208975" data-name="Group 208975" transform="translate(0 0)">
+                          <path id="Path_1" data-name="Path 1" d="M328.831,120.079a18.374,18.374,0,0,1,14.5,6.724q5.8,6.724,5.8,16.779,0,10.005-5.8,16.7a19.108,19.108,0,0,1-29.05,0q-5.849-6.7-5.849-16.7,0-10.061,5.849-16.779a18.508,18.508,0,0,1,14.55-6.724m0,42.195a14.177,14.177,0,0,0,11.261-5.321,22.018,22.018,0,0,0-.02-26.762,14.132,14.132,0,0,0-11.241-5.4,14.278,14.278,0,0,0-11.333,5.346,22.042,22.042,0,0,0,0,26.814,14.3,14.3,0,0,0,11.333,5.321" transform="translate(-268.85 -104.669)" fill="#1a2024"></path>
+                          <path id="Path_2" data-name="Path 2" d="M911.15.115v15.3H926v4.017H911.15V46.866q0,6.628,1.236,8.711t6.649,2.079a26.216,26.216,0,0,0,9.672-2.256v4.714a27.981,27.981,0,0,1-10.935,2.359,14.251,14.251,0,0,1-8.75-2.614,8.478,8.478,0,0,1-3.516-7.219V19.429h-14.27l4.576-4.017h9.694V4.429l3.86-4.314Z" transform="translate(-776.859 -0.1)" fill="#1a2024"></path>
+                          <path id="Path_3" data-name="Path 3" d="M639.38,167.836H624.387l4.282-8.3h-29.08l4.424,8.3H588.931l18.339-46.5H621.1ZM621.53,153.37l-7.286-20.019-8.976,25.411Z" transform="translate(-513.351 -105.768)" fill="#ed1c24"></path>
+                          <path id="Path_4" data-name="Path 4" d="M0,59.12V0H1.548L4.419,4.32,4.426,21.7a18.2,18.2,0,0,1,13.86-6.452c3.772-.093,10.359,1.9,13.782,5.739a22.932,22.932,0,0,1,5.969,15.866c0,7.779-2.031,14.2-6.258,18.89S21.7,62.276,14.694,62.276A35.24,35.24,0,0,1,0,59.12M4.436,26.759,4.348,55.922a24.73,24.73,0,0,0,10.079,1.712C19.783,57.634,25.3,56,28.8,52.123c3.08-2.887,5.071-8.949,5.194-14.883A18.918,18.918,0,0,0,29.7,24.6,13.825,13.825,0,0,0,18.667,19.36c-5.052-.066-9.539,1.376-14.231,7.4" transform="translate(0 0.001)" fill="#1a2024"></path>
+                        </g>
+                      </svg> -->
+                      <h1 style="color: rgb(3, 3, 3); text-shadow: rgb(255, 99, 99) 1px 0 10px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Glossier </h1>
+                </div>
+                <div id="nav2"> 
+                    <div style="display: flex;">
+                        <img  style="width: 20px; height: 20px;"src="https://www.pngall.com/wp-content/uploads/9/Green-Tick-PNG-Photo.png" alt=".">
+                          <p>Mobile</p>
+                    </div>
+                   
+                    <div style="display:flex ;"> <button style=" width: 20px;height: 20px; border-radius: 50%;background-color: white; margin-left: 100px; margin-top: -3px; padding: 1px;">2</button> <h5>Address</h5> </div>
+                    <div  style="margin-left: 18%; display:flex ; color: rgb(194, 189, 189)"> <button style=" border-radius: 50%; border: none;width: 19px;height: 19px; color: rgb(198, 186, 186)">3</button> <h5>pay</h5></div>
+                </div>
+                <hr>
+                <p>Hey! Welcome back</p>
+                <h2>Shipping Address </h2>
+
+                <div id="add_display">  
+
+                </div>
+
+
+                <div style="display: flex;">
+                    <p>Shipping method</p> 
+                    <img style="width: 15px; height: 15px; margin-top: 16px; margin-left: 10px;" src="https://flyclipart.com/thumb2/us-i-corps-586097.png" alt="">
+                    <p  style="margin-left: 10px;"> Standard @ ₹0 (Order within 14 hrs 7 mins)</p>
+                </div>
+                <div  id="plus">
+                    <img  style="width: 40px; height: 40px; margin-top: 16px; margin-left: 10px; cursor: pointer; " src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Feather-core-plus-circle.svg/1024px-Feather-core-plus-circle.svg.png" alt="">
+                    <p style="margin-top:28px; margin-left: 10px;">Add New Address</p>
+                </div>
+              <a href="pay.html"><button id="conti"> Continue  ⮕</button></a> 
+              <div id="footer">
+                <p>T&C | Privacy | 8106e687</p>
+                <p style="margin-left: 280px;">Powered By</p>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="50" height="14.150943396226415" viewBox="0 0 106 30" fill="none">
+                    <path d="M24.1624 14.9999L9.62047 29.4194C8.83982 30.1935 7.57807 30.1935 6.79741 29.4194L0.585488 23.2598C-0.195163 22.4857 -0.195163 21.2346 0.585488 20.4605L15.1274 6.04102L24.1624 14.9999Z" fill="url(#paint0_linear)"></path>
+                    <path d="M16.1588 13.0227L3.21151 25.864L0.917969 23.5898L13.8653 10.7515L16.1588 13.0227Z" fill="url(#paint1_linear)"></path>
+                    <path d="M12.7491 21.5977L0.585488 9.53648C-0.195163 8.7624 -0.195163 7.51127 0.585488 6.73719L6.79741 0.58056C7.57807 -0.19352 8.83982 -0.19352 9.62047 0.58056L21.7841 12.6418L12.7491 21.5977Z" fill="url(#paint2_linear)"></path>
+                    <path d="M26.2358 20.9404L17.6849 29.4192C16.9043 30.1933 15.6425 30.1933 14.8619 29.4192L8.64994 23.2596C7.86929 22.4855 7.86929 21.2344 8.64994 20.4603L17.2008 11.9814L26.2358 20.9404Z" fill="url(#paint3_linear)"></path>
+                    <path d="M24.2233 13.0227L11.276 25.861L8.98242 23.5898L21.9297 10.7515L24.2233 13.0227Z" fill="url(#paint4_linear)"></path>
+                    <path d="M28.4226 11.2284L17.6992 0.595314C16.9125 -0.184766 15.6356 -0.184766 14.8459 0.595314L8.66425 6.72495C7.87754 7.50503 7.87754 8.77116 8.66425 9.55424L18.495 19.3022C21.0881 21.8735 21.0881 26.0439 18.495 28.6152L23.191 23.9587L28.4226 18.7712C30.5225 16.689 30.5225 13.3136 28.4226 11.2284Z" fill="url(#paint5_linear)"></path>
+                    <path d="M39.7781 14.5616H45.911V20.1511C44.5591 21.6243 42.5596 22.4854 40.5033 22.4854C36.5819 22.4854 33.2871 19.3651 33.2871 15.6717C33.2871 11.9783 36.5819 8.87598 40.5033 8.87598C42.5596 8.87598 44.5591 9.73707 45.911 11.1922L43.1893 13.5835C42.5417 12.7404 41.5509 12.2423 40.5033 12.2423C38.656 12.2423 37.0952 13.8115 37.0952 15.6687C37.0952 17.5439 38.656 19.113 40.5033 19.113C41.151 19.113 41.7777 18.921 42.3328 18.576V17.2948H39.7811V14.5616H39.7781Z" fill="white"></path>
+                    <path d="M47.0723 17.2975C47.0723 14.4832 49.606 12.1279 52.6322 12.1279C55.6404 12.1279 58.1742 14.4832 58.1742 17.2975C58.1742 20.1118 55.6404 22.485 52.6322 22.485C49.606 22.485 47.0723 20.1118 47.0723 17.2975ZM54.7481 17.2975C54.7481 16.1483 53.7782 15.1912 52.6351 15.1912C51.4742 15.1912 50.5013 16.1483 50.5013 17.2975C50.5013 18.4466 51.4712 19.4217 52.6351 19.4217C53.7752 19.4217 54.7481 18.4466 54.7481 17.2975Z" fill="white"></path>
+                    <path d="M59.623 9.104H63.3177V14.2915L67.7167 9.104H72.0769L67.2422 14.5976L72.4589 22.2544H68.042L64.6726 17.2768L63.3207 18.771V22.2544H59.626V9.104H59.623Z" fill="white"></path>
+                    <path d="M72.2324 12.3589H75.754L77.2193 17.2974L78.6667 12.3589H81.675L83.1403 17.2974L84.5878 12.3589H88.1093L84.7608 22.2539H81.5049L80.1709 17.1624L78.8756 22.2539H75.6197L72.2324 12.3589Z" fill="white"></path>
+                    <path d="M89.0449 9.39179C89.0449 8.39569 89.8835 7.5166 90.949 7.5166C91.9786 7.5166 92.8142 8.39869 92.8142 9.39179C92.8142 10.4269 91.9756 11.306 90.949 11.306C89.8835 11.306 89.0449 10.4239 89.0449 9.39179ZM89.0837 12.3591H92.7575V22.2571H89.0837V12.3591Z" fill="white"></path>
+                    <path d="M105.002 22.2544H100.89L99.081 18.981L98.2812 19.9771V22.2544H94.6074V9.104H98.2812V15.8427L100.815 12.3593H104.927L101.48 16.6288L105.002 22.2544Z" fill="white"></path>
+                    <defs>
+                    <linearGradient id="paint0_linear" x1="0.360401" y1="29.6442" x2="9.17352" y2="20.7563" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#EDDE5D"></stop>
+                    <stop offset="1" stop-color="#F09819"></stop>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear" x1="-1.90384" y1="28.6617" x2="5.24609" y2="21.4511" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#EDDE5D"></stop>
+                    <stop offset="1" stop-color="#F09819"></stop>
+                    </linearGradient>
+                    <linearGradient id="paint2_linear" x1="-1.40702" y1="-1.39517" x2="18.4525" y2="18.633" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#EDCE4D"></stop>
+                    <stop offset="1" stop-color="#F09819"></stop>
+                    </linearGradient>
+                    <linearGradient id="paint3_linear" x1="34.407" y1="3.88112" x2="12.6349" y2="25.8381" gradientUnits="userSpaceOnUse">
+                    <stop offset="0.1617" stop-color="#000428"></stop>
+                    <stop offset="1" stop-color="#004B8D"></stop>
+                    </linearGradient>
+                    <linearGradient id="paint4_linear" x1="22.0876" y1="12.8687" x2="10.0431" y2="25.0154" gradientUnits="userSpaceOnUse">
+                    <stop offset="0.1617" stop-color="#000428"></stop>
+                    <stop offset="1" stop-color="#004B8D"></stop>
+                    </linearGradient>
+                    <linearGradient id="paint5_linear" x1="-22.7211" y1="-25.8693" x2="21.4361" y2="18.6628" gradientUnits="userSpaceOnUse">
+                    <stop offset="0.1617" stop-color="#000428"></stop>
+                    <stop offset="1" stop-color="#004B8D"></stop>
+                    </linearGradient>
+                    </defs>
+                    </svg>
+              </div>
+
+            </div>
+            <div id="right_box">
+                <div id="order_sum">
+                    <img src="https://www.freepnglogos.com/uploads/shopping-cart-png/shopping-cart-svg-png-icon-download-28.png" alt="">
+                     <p>Order summary </p>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" id="down"><path fill="#000" d="M5.305 8.306a1.046 1.046 0 0 0 0 1.478l5.904 5.91c.228.228.536.33.834.302.27 0 .539-.101.744-.306l5.907-5.907a1.044 1.044 0 1 0-1.477-1.477l-5.22 5.22-5.216-5.22a1.043 1.043 0 0 0-1.476 0Z"></path></svg>
+                     
+                </div>
+
+
+                <div id="orderInfo" >
+                    <div id="bag" style="display: flex;">
+                        <img style="width: 20px; height: 20px; margin: 20px 0 20px 70px;" src="https://png.pngtree.com/png-vector/20190507/ourmid/pngtree-vector-list-icon-png-image_1024597.jpg"
+                         alt="">
+                         <h3>Total Items:</h3>
+                         <span id="Items"   style="margin-top:22px;margin-top:19px;margin-left: 5px; font-size: larger;" > Items :- </span>
+                    </div>
+                    <div id="price"  style="display: flex;">
+                        <img style="width: 20px; height: 20px; margin: 20px 0 20px 70px;" src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/ic_payment_details-03.svg"
+                         alt="">
+                         <h3> Total Price:</h3>
+                         <span id="Grand_total" style="margin-top:19px;margin-left: 5px; font-size: larger;"> ₹ </span>
+                    </div>
+
+                </div>
+
+
+                <div id="truck" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="24" viewBox="0 0 34 24" fill="none">
+                         <path d="M23.6668 22.0787C25.1395 22.0787 26.3335 20.8848 26.3335 19.412C26.3335 17.9392 25.1395 16.7453 23.6668 16.7453C22.194 16.7453 21.0001 17.9392 21.0001 19.412C21.0001 20.8848 22.194 22.0787 23.6668 22.0787Z" stroke="#039855" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                         <path d="M10.3336 22.0787C11.8064 22.0787 13.0003 20.8848 13.0003 19.412C13.0003 17.9392 11.8064 16.7453 10.3336 16.7453C8.86084 16.7453 7.66693 17.9392 7.66693 19.412C7.66693 20.8848 8.86084 22.0787 10.3336 22.0787Z" stroke="#039855" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                         <path d="M6.33312 1H23.6665L20.9999 12.7334H2.3331" stroke="#039855" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                         <path d="M1 19.413H7.72003" stroke="#039855" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                         <path d="M13.0001 19.413H21.0001" stroke="#039855" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                         <path d="M3.66693 6.86462H14.3336" stroke="#039855" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                         <path d="M22.3332 6.86462H27.6666C30.6132 6.86462 32.9999 9.2513 32.9999 12.198V19.398H26.3332" stroke="#039855" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                         </svg>
+                     <p>Earliest Delivery by 22 July, 9 AM</p>
+                 </div>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+<script>
+    const leftSection = document.querySelector('h1');
+    leftSection.addEventListener('mouseenter', () => {
+        leftSection.textContent = 'YOU LOOK GOOD';
+    });
+    leftSection.addEventListener('mouseleave', () => {
+        leftSection.textContent = 'Glossier';
+    });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+</script>
+<script src="./payment.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
