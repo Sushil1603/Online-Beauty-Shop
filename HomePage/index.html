@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Glossier Home Page</title>
+    <link rel="icon" href="https://i.ibb.co/1d9BGZK/download-1-removebg-preview.jpg">
+
+    <script src="https://kit.fontawesome.com/ab7e10d51f.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../Navbar/nav.css">
+    <link rel="stylesheet" href="./home.css">
+</head>
+<body>
+    <div id="navbar">
+        <nav class="navbar  bg-white fixed-top">
+            <div class="container-fluid align-items-center">
+                <div id="menu-icon">
+                    <i class="fa-solid fa-bars show" style="color: #000000;"></i>
+                </div>
+
+                <div>
+                    <a href="/index.html"><img class="navbar-brand"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAAZCAMAAAA8GUGSAAAAbFBMVEX///8hHR8AAAAeGhwTDRAbFhj4+PjV1dUXERS4uLgNBAkEAADv7+/q6ur8/Pz19fV7ent1dHXCwsKHhobj4+M/PT6vr69gXl/Ozs7JyMkqJylZV1hJR0hEQkNSUFGhoKGXl5dsa2wzMTKPj483yXg9AAAEXElEQVRIiZVW7bKjIAyVgBbRqpVWb7Vf6vu/4+YEtN7Z3ZmWP20iIcnJSSBJ4qpaPw5aPfxh1SRWK/pJvl3V65R/vDnzRCZVSqWGHnXQHUkpqr/2O5Kh7sO9LTm1LaPrqFRaf+0242jt47O9T9JKaUe8kLMJZotTdvrab8JnudNHOzsOUTm7XM/n/IH/1ELdW+Ve3/ttiYbjJxsP4qqpguQLLrIkrHUM4MtVnz/bd2Fs6flb5AqXoNUWeHk8Zr+symP9X2mvL//SVUGX8/lmV5CWCko55CvTygXVz6RR+9vWH8eTZfke5drj8yWQeBnmoYkn9dhlTzH/XM3zIzlPrBtCfpqqXTx9JxufTqWjxDeR0SB6SreQ809QpNRDOhcuSHec8jA6gHeYyUKvDYX4vNPO5zA1nq043X/SZ2JaLYBqcDB2Bky/SCAFn2fgjPiAZE4hoToIw8Vhk6M1UucsyCOz6JZyIgyitZC7Yl/G3VJ8AAKd2dIp/2zQbLTEyhT+NTvqayQPVj5vXIcypEFl0Gq6vZ49/0klXNA3VYWZesDcGKWHf7itcAAD3hQxLTlSFwDMKAcoJ8HzWQhuifeBHRwvrDW7vULTxYNgzv9WaB/pezpcT40sMAHdVVTCahO/v1yArIl+N6343STby8yJ6DJgDFwXUFK0UXPgcyP/koaMLODO+Ke36Cv2iGDYYbztG6+FtKzEjMOGq2xPWYlVn6yEiVDc6omng3qHi9YFA1XAH3rA0cfPNSBgvxlIVNASG1oIQL7cWNFKdZWhsJiQ8MsR6eI9A3jDinPFmwrIfYgBPpi6G9vhV4DizkGpXbgkjwpGTr7EYfMs1K8FlLip3LseyV2rdI7/syyDPzgSWh3kp1ghFZzFV31CFprCRKh8kK5h2FhhnrK0W4dwq77v9oTRV/SeqFKtNvrI5FbbONTtLuTjBMKtFSib2C2cqB3Fr50OuxUiSt9upX+3CiYlBhFoxezT6Lr9EL2nQrWqk7CZcXI95+0WE7eWkWHz2l2hhzA/efzZcee3FHovcQ83dpjK3gV/PIy0C2wQGufZ4sJ4ZOC48V+KQpWCX96OOqOLo9XR0YzKr+NvWw2eGnTvDod8Ihm0uAWZx1LXF+AYKzyb8JC4cwF0CHORBHDLNyFfjqKOMyI8OsDwll9P1rH9sN2q1SSfKi3vKlSfmc7/JSwTx2yGUKwbH85hE1egZ84Uqp8LoSmua2fGC4ndIWTNQcExPUYtc+ucbBEhUdIOiB+NWfluhz4AtY5Z8AFvoDRFnxsY1hj4rGCZEa4GC0kjqEyGzV0OvwBFsZJbAB0tMzbQRBn8qXtyqdb8lLxl3CAIqyW+YcK2H8v3GX/lsoaKnQcoePcd3K4vURrYDNaxR3t+n4rV7RjIYYpbLCytL7jk/Oovl9EzsJ33KFfbeL9Nwvx0m+/T891s+XS/PPw1Su3pPj8aqd3Le7++uA/LOF/6JbYsn+vjbK5Odiz/AK1iOizB5UCEAAAAAElFTkSuQmCC"
+                            alt=""></a>
+
+
+
+                </div>
+                <div id="middle" class="nav-right nav-links">
+                    <li>
+                        <a href="../Product-page/product.html" class="desktop-item">SKINCARE</a>
+                        <input type="checkbox" id="showMega" />
+                        <label for="showMega" class="mobile-item">SKINCARE</label>
+                        <div class="mega-box">
+                            <div class="content">
+                                <div class="row">
+                                    <div>
+                                        <p>Shop All</p>
+                                        <p>Bestsellers</p>
+                                    </div>
+                                    <div>
+                                        <p>NEW</p>
+                                        <p>Ultralip in Pony and Cranberry</p>
+                                        <p>Boy Brow</p>
+                                        <p>Limited Edition Embroidered Cream</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <ul class="mega-links">
+                                        <li><a href="#">All skincare</a></li>
+                                        <li><a href="#">Cleansers </a></li>
+                                        <li><a href="#">Balms</a></li>
+                                        <li><a href="#">Treatments</a></li>
+                                        <li><a href="#">Sunscreen</a></li>
+                                        <li><a href="#">Moisturizers</a></li>
+                                    </ul>
+                                </div>
+                                <div class="row">
+                                    <div class="nav-prod-img-div">
+                                        <img src="https://glossier-prod.imgix.net/files/Highlight-card-skincare.jpg?auto=compress,format&cs=srgb&w=360"
+                                            alt="" />
+                                        <p>Create a skincare set</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="desktop-item">MAKEUP</a>
+                        <input type="checkbox" id="showMega" />
+                        <label for="showMega" class="mobile-item">MAKEUP</label>
+                        <div class="mega-box">
+                            <div class="content">
+                                <div class="row">
+                                    <div>
+                                        <p>Shop All</p>
+                                        <p>Bestsellers</p>
+                                    </div>
+                                    <div>
+                                        <p>NEW</p>
+                                        <p>Ultralip in Pony and Cranberry</p>
+                                        <p>Boy Brow</p>
+                                        <p>Limited Edition Embroidered Cream</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <ul class="mega-links">
+                                        <li><a href="#">All makeup</a></li>
+                                        <li><a href="#">Complexion </a></li>
+                                        <li><a href="#">Brow</a></li>
+                                        <li><a href="#">Eye</a></li>
+                                        <li><a href="#">Cheek</a></li>
+                                        <li><a href="#">Lip</a></li>
+                                        <li><a href="#">Tools</a></li>
+                                        <li><a href="#">Makeup removers</a></li>
+                                    </ul>
+                                </div>
+                                <div class="row">
+                                    <div class="nav-prod-img-div">
+                                        <img src="https://glossier-prod.imgix.net/files/glossier-bb-browflickduo-carousel-02.png?auto=compress,format&cs=srgb&w=540"
+                                            alt="" />
+                                        <p>Create a skincare set</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="desktop-item">BODY</a>
+                        <!-- <input type="checkbox" id="showMega" /> -->
+                        <label for="showMega" class="mobile-item">BODY</label>
+                        <div class="mega-box">
+                            <div class="content">
+                                <div class="row">
+                                    <div>
+                                        <p>Shop All</p>
+                                        <p>Bestsellers</p>
+                                    </div>
+                                    <div>
+                                        <p>NEW</p>
+                                        <p>Ultralip in Pony and Cranberry</p>
+                                        <p>Boy Brow</p>
+                                        <p>Limited Edition Embroidered Cream</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <ul class="mega-links">
+                                        <li><a href="#">All Body</a></li>
+
+                                        <li><a href="#">Save with sets</a></li>
+                                    </ul>
+                                </div>
+                                <div class="row">
+                                    <div class="nav-prod-img-div">
+                                        <img src="https://glossier-prod.imgix.net/products/glossier-handcream-carousel-02.png?auto=compress,format&cs=srgb&w=540"
+                                            alt="" />
+                                        <p>Create a skincare set</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="desktop-item">FRAGRANCE</a>
+                        <input type="checkbox" id="showMega" />
+                        <label for="showMega" class="mobile-item">FRAGRANCE</label>
+                        <div class="mega-box">
+                            <div class="content">
+                                <div class="row">
+                                    <div>
+                                        <p>Shop All</p>
+                                        <p>Bestsellers</p>
+                                    </div>
+                                    <div>
+                                        <p>NEW</p>
+                                        <p>Ultralip in Pony and Cranberry</p>
+                                        <p>Boy Brow</p>
+                                        <p>Limited Edition Embroidered Cream</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <ul class="mega-links">
+                                        <li><a href="#">All FRAGRANCE</a></li>
+
+                                        <li><a href="#">Save with sets</a></li>
+                                    </ul>
+                                </div>
+                                <div class="row">
+                                    <div class="nav-prod-img-div">
+                                        <img src="https://glossier-prod.imgix.net/files/nav-fragrance-884x1105.png?auto=compress,format&cs=srgb&w=360"
+                                            alt="" />
+                                        <p>Create a skincare set</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="desktop-item">GLOSSIER GOODS</a>
+                        <input type="checkbox" id="showMega" />
+                        <label for="showMega" class="mobile-item">GLOSSIER GOODS</label>
+                        <div class="mega-box">
+                            <div class="content">
+                                <div class="row">
+                                    <div>
+                                        <p>Shop All</p>
+                                        <p>Bestsellers</p>
+                                    </div>
+                                    <div>
+                                        <p>NEW</p>
+                                        <p>Ultralip in Pony and Cranberry</p>
+                                        <p>Boy Brow</p>
+                                        <p>Limited Edition Embroidered Cream</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <ul class="mega-links">
+                                        <li><a href="#">All GLOSSIER GOODS</a></li>
+
+                                        <li><a href="#">Save with sets</a></li>
+                                    </ul>
+                                </div>
+                                <div class="row">
+                                    <div class="nav-prod-img-div">
+                                        <img src="https://glossier-prod.imgix.net/files/glossier-beautybag-navcard-1.png?auto=compress,format&cs=srgb&w=360"
+                                            alt="" />
+                                        <p>Create a skincare set</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+
+                <div class="nav-right">
+                    <div id="search-bar" class="input-group-cus mb-1-cus">
+                        <input type="text" class="  form-control-cus" id="searchright" placeholder="Search Item"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div id="show-result">
+
+                        </div>
+
+                    </div>
+
+                    <div id="user-detail-div">
+
+                        <a href=" ./signup.html">
+                            <p id="user-name"><i class="fa-regular fa-user" style="color: #ded9d9">
+                                </i> Login</p>
+                        </a>
+
+                    </div>
+
+                    <p data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span id="cart-btn">
+                            <i class="fa-solid fa-bag-shopping" style="color: #e3d9d9"></i>
+                        </span>
+                        <span id="cart-value">
+                        </span>
+                    </p>
+                </div>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header container-fluid justify-content-lg-between">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Glossier</h5>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+                    </div>
+
+                    <div id="bag-name">
+                        <p>SHOPPING BAG</p>
+
+                    </div>
+                    <div class="offcanvas-body">
+
+                        <div id="card-child-list"> </div>
+                    </div>
+                    <div id="checkout-div" class="offcanvas-bottom">
+                        <a href="../checkout.html"><button id="checkout-btn"><span></span> - Checkout</button></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="side-menu">
+            <div id="side-menu-header">
+                <i id="close" class="fa-solid fa-xmark" style="color: #080808;"></i>
+            </div>
+            <div id="side-menu-body">
+                <a href="../Product-page/product.html">
+                    <p>SKINCARE</p>
+                </a>
+                <p>MAKEUP</p>
+                <p>BODY</p>
+                <p>FRAGRANCE</p>
+                <p>GLOSSIER GOODS</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="upper">
+        <a href="./Product-page/product.html">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/screen-shot-2022-04-20-at-12-59-18-pm-1650474680.png" alt="photo" id="main-photo">
+        </a>
+            <div id="inner">
+                <a href="./Product-page/product.html">
+                <h2>Olivia Rodrigo's <br> top hits</h2>
+                <p>Olivia gave us her desert island beauty <br> must-haves, which are available together <br> in our latest set.</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC3MgUkLXj-qqpCz-mzlEfKd2qcT_N5RIiOA&usqp=CAU" alt="pro">
+                <br>
+                <button>Choose set</button>
+            </a>
+            </div> 
+    </div>
+
+    <div id="mid">
+        <h3> <span>LIFE</span> BEAUTY INSPIRED BY REAL</h3>
+        <P>Glossier is a new approach to beauty. its about <br> fun and freedom and being OK with yourself <br> today. We make intuitive, uncomplicated products <br> designed to live with you.</P>
+    </div>
+</body>
+</html>

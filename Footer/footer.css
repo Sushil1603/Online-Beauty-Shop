@@ -5,33 +5,34 @@
     color: rgb(234, 227, 227);
     padding: 40px 8vw;
     margin: 0;
-    font-family: 'IBM Plex Sans Hebrew', sans-serif;
+    
+    font-family: 'IBM Plex Sans Hebrew', sans-serif ;
 
 }
 *{
     margin: 0;
     padding: 0;
 }
-#footer-main-content>div:first-child {
+#footer #footer-main-content>div:first-child {
     width: 35%;
     justify-content: space-between;
     display: flex;
 }
 
-#footer-main-content {
+#footer #footer-main-content {
     display: flex;
 
     justify-content: space-between;
 }
-#footer-left-div , #footer-right-div{
+#footer #footer-left-div , #footer-right-div{
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-#footer-left-div span, #footer-right-div span{
+#footer #footer-left-div span, #footer-right-div span{
     color: rgba(238, 230, 230, 0.833);
 }
-#footer-logo {
+#footer #footer-logo {
     font-size: 120px;
     font-weight: lighter;
     color: rgb(64, 39, 210);
@@ -41,12 +42,12 @@
     -webkit-text-stroke-color: rgb(234, 227, 227);
 }
 
-#footerBtns {
+#footer #footerBtns {
     display: flex;
     gap: 8px;
 }
 
-#footerBtns button {
+#footer #footerBtns button {
 
     width: 30px;
     height: 30px;
@@ -57,7 +58,7 @@
     border-radius: 50%;
 }
 
-#footer-logo+div {
+#footer #footer-logo+div {
    
     display: flex;
     justify-content: space-between;
@@ -65,7 +66,7 @@
     padding: 0 10px;
 }
 
-#footerBtns+div button {
+#footer #footerBtns+div button {
     background-color: #322d2d;
     height: 28px;
     color: white;
@@ -74,7 +75,7 @@
     border: 1px solid white;
     border-radius: 10px;
 }
-#footerBottom{
+#footer #footerBottom{
     display: flex;
     font-size: 13px;
     color: rgb(177, 169, 169);
@@ -82,32 +83,32 @@
     margin-top: 30px;
     justify-content: space-between;
 }
-#footerBottom > div:first-child{
+#footer #footerBottom > div:first-child{
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
 @media screen and (max-width : 1040px ) {
-    #footer-main-content {
+    #footer #footer-main-content {
        display: flex;
        flex-direction: column;
        }
-       #footer-logo{
+       #footer #footer-logo{
         font-size: 80px;
        }
 
-       #footer-main-content>div:first-child{
+       #footer #footer-main-content>div:first-child{
         width: 100%;
        }
-       #footerBottom{
+       #footer #footerBottom{
         flex-direction: column;
        }
-       #footerBottom>P{
+       #footer #footerBottom>P{
         width: 100%;
         gap: 12px;
        }
-       .hidden{
+       #footer .hidden{
         display: none;
        }
 }

@@ -25,6 +25,7 @@ main{
     border-bottom: 1px solid rgb(148, 135, 135);
     width: 433px;
     top: 0;
+    z-index: 1000;
 }
 
 #product-list-container {
@@ -69,16 +70,13 @@ section {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    
-
 }
 
 .cardBodyLeft {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 18px 0px;
-    
+    padding: 18px 0px;  
 }
 
 .cardBodyRight {
@@ -125,7 +123,6 @@ section {
 }
 
 #checkout>div>p {
-
     text-align: center;
     padding: 15px;
 }

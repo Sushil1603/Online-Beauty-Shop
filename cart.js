@@ -122,32 +122,48 @@ let data = [
 
 //   data.forEach((element)=>{
 //      cartArr.push(element);
-//      localStorage.setItem("cartArr", JSON.stringify(cartArr));
+//      localStorage.setItem("cart", JSON.stringify(cartArr));
 //   })
 
 let productContainer = document.getElementById("product-list-container")
 
 let totalCartProducts = document.getElementById("totalItem")
 let totalPriceHTMl = document.getElementById("totalPrice");
-let cartArr = JSON.parse(localStorage.getItem("cartArr")) || [];
+let cartArr = JSON.parse(localStorage.getItem("cart")) || [];
 let shippingChargMsg = document.getElementById("shippingCharges");
-// let decreaseQuantity = document.getElementById("decrease");
-// let increaseQuantity = document.getElementById("increase");
+
+
 
 let totalPrice;
 
 let shippingCharges;
 let cartProductArr = [];
 
-cartArr.forEach((element) => {
-    let obj = { ...element }
-    obj.quantity = 1;
-    obj.totalPrice = element.price
+if (cartArr) {
+    cartArr.forEach((element) => {
+        let obj = { ...element }
+        obj.quantity = 1;
+        obj.totalPrice = element.price
 
-    cartProductArr.push(obj)
-})
+        cartProductArr.push(obj)
+    })
+}
+
 console.log(cartProductArr)
 
+function emptyCart() {
+    if (cartProductArr.length === 0) {
+        document.getElementById("product-section").innerHTML = `
+        <div id="emptyCartMsg">
+        Your bag is empty,
+        <br>
+        but you still look good.
+    </div>`
+
+        document.getElementById("checkout").style.display = "none";
+    }
+
+}
 
 function getData() {
     let data = cartProductArr;
@@ -157,14 +173,7 @@ function getData() {
         displayData(data);
     }
     else {
-        document.getElementById("product-section").innerHTML = `
-        <div id="emptyCartMsg">
-        Your bag is empty,
-        <br>
-        but you still look good.
-    </div>`
-
-        document.getElementById("checkout").style.display = "none";
+        emptyCart();
     }
 }
 getData();
@@ -183,9 +192,12 @@ function displayData(data) {
 
         crossIcon.addEventListener("click", () => {
             cartProductArr.splice(index, 1);
-            totalPrice = totalPrice - Number(element.price)
-            totalPriceHTMl.textContent = totalPrice;
+            
+            totalPriceFunction();
             shipping();
+            totalNoOfProducts();
+            emptyCart();
+            localStorage.setItem("cartProductArr", JSON.stringify(cartProductArr));
             displayData(cartProductArr);
         })
         let cardContent = document.createElement("div")
@@ -218,20 +230,21 @@ function displayData(data) {
         decrease.addEventListener("click", () => {
             if (element.quantity > 1) {
                 element.quantity--;
-                element.totalPrice -= element.price;
-                totalPrice = totalPrice - Number(element.price)
-                
+               element.totalPrice = element.totalPrice - element.price;
+                cartProductArr[index].quantity = Number(element.quantity);
+                localStorage.setItem("cartProductArr", JSON.stringify(cartProductArr));
+                totalPriceFunction();
                 displayData(cartProductArr);
                 shipping();
             }
             else {
                 cartProductArr.splice(index, 1);
-
-                
-                totalPrice = totalPrice - Number(element.price)
-                totalPriceHTMl.textContent = totalPrice;
+                localStorage.setItem("cartProductArr", JSON.stringify(cartProductArr));
+                totalNoOfProducts();
+                emptyCart();
                 displayData(cartProductArr);
                 shipping();
+                totalPriceFunction();
             }
 
         })
@@ -247,10 +260,12 @@ function displayData(data) {
         increase.addEventListener("click", () => {
             element.quantity++;
             element.totalPrice += element.price;
-            totalPrice = totalPrice + Number(element.price)
-            totalPriceHTMl.textContent = totalPrice;
+            
+            cartProductArr[index].quantity = Number(element.quantity);
+            localStorage.setItem("cartProductArr", JSON.stringify(cartProductArr));
             shipping();
             displayData(cartProductArr);
+            totalPriceFunction();
         })
 
         increase.textContent = "+";
@@ -278,19 +293,24 @@ function displayData(data) {
         productContainer.append(card);
     })
 }
+function totalNoOfProducts() {
+    if (cartProductArr.length === 0) {
+        totalCartProducts.textContent = "";
 
-if (cartArr.length === 0) {
-    totalCartProducts.textContent = "";
+    }
+    else {
+        totalCartProducts.textContent = `(${cartProductArr.length} items)`;
+    }
 }
-else {
-    totalCartProducts.textContent = `(${cartArr.length} items)`;
-}
+totalNoOfProducts();
 
-totalPrice = cartProductArr.reduce((acc, currentElement) => {
-    return acc += Number(currentElement.totalPrice);
-}, 0)
+
 
 function shipping() {
+    totalPrice = cartProductArr.reduce((acc, currentElement) => {
+        return acc += Number(currentElement.totalPrice);
+    }, 0)
+
     if (totalPrice > 40) {
         shippingCharges = 0;
     }
@@ -302,8 +322,16 @@ function shipping() {
 shipping();
 
 
-totalPriceHTMl.textContent = totalPrice;
 
 
+function totalPriceFunction(){
+    totalPrice = cartProductArr.reduce((acc, currentElement) => {
+        return acc += Number(currentElement.totalPrice);
+    }, 0)
 
+    totalPriceHTMl.textContent = totalPrice;
+}
 
+totalPriceFunction();
+
+localStorage.setItem("cartProductArr", JSON.stringify(cartProductArr));
