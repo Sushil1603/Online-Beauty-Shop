@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+}
+
+.bg_Poster {
+  background: url("https://fashionista.com/.image/t_share/MTg4ODk2MTA5NDYzMjE3Njk2/olivia-rodrigo-glossier-campaign-8.png");
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  /* position: fixed; */
+  transform: rotateY(180deg);
+}
+.nav_top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  color: white;
+  transform: scaleX(-1);
+}
+.nav_top > div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav_top > div:nth-child(3) {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.sec_portion {
+    width: 70%;
+    margin: 50px auto; 
+}
+
+.sec_portion > div:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.products_Best {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.show_product > p:nth-child(1) {
+  display: flex;
+  justify-content: end;
+}
+
+.show_product > div:nth-child(2) > img{
+    width: 100%;
+    height: 290px;
+    object-fit: fill;
+}
+.show_product > div:nth-child(4) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.show_product > div:nth-child(4) > h4,p {
+  margin: 5px;
+}
+.cat_protion{
+    width: 70%;
+    margin: 50px auto;
+}
+.categories > img{
+    width: 100%;
+    height: 290px;
+    object-fit: fill;
+}
+
+.parent-div {
+    width: 70%;
+    margin: 0 auto; /* Center the container */
+    display: flex; /* Display children side by side */
+    justify-content: space-between; /* Space children evenly */
+    background-color: #f0f0f0; /* Background color for demonstration */
+}
+
+/* Style the child divs */
+.child-div {
+    width: 30%; /* 30% of the parent's width (with margins, they will add up to 100%) */
+    padding: 10px;
+    background-color: #fff; /* Background color for demonstration */
+    border: 1px solid #ccc; /* Border for demonstration */
+}

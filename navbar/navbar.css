@@ -1,0 +1,99 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    background-color:whitesmoke;
+    color: burlywood;
+    padding: 10px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    text-align: left;
+    flex: 1;
+}
+
+.left h2 {
+    transition: color 0.3s ease;
+}
+
+.middle {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.middle a.nav-link {
+    text-decoration: none;
+    color:#333;
+    margin: 0 10px;
+}
+
+.middle a.nav-link:hover {
+    text-decoration: underline;
+}
+
+.middle a.nav-link::before {
+    content: attr(data-info);
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.middle a.nav-link:hover::before {
+    opacity: 1;
+}
+
+.right {
+    text-align: right;
+    flex: 1;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+#bagCnt {
+    background-color: #ff5722;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+    .main {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .left, .middle, .right {
+        text-align: center;
+        width: 100%;
+    }
+
+    .middle {
+        flex-wrap: wrap;
+    }
+
+    .middle a.nav-link {
+        margin: 5px 0;
+    }
+}
