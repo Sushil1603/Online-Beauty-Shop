@@ -1,0 +1,228 @@
+body {
+  letter-spacing: 0.5px;
+  font-family: Apercu, Gill Sans, sans-serif;
+}
+
+
+#alert-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  transform: 5s;
+}
+
+#alert {
+  background-color: #fff;
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 50px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#alert p {
+  margin-top: 0;
+  
+  font-weight: 400;
+}
+
+#alert button {
+  display: flex;
+  margin: auto;
+  margin-bottom: -10px;
+  padding: 8px 20px;
+  border: 0;
+  /* background-color: white; */
+  background-color: #f0f0f0;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#alert button:hover {
+  cursor: pointer;
+  border: 0;
+  border: 1px dashed black;
+}
+
+#container {
+  width: 97%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 10px;
+  grid-column-gap: 22px;
+}
+#container .card{
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.09);
+  padding: 7px;
+  justify-content: flex-start;
+}
+
+/* Image */
+ .img-product {
+
+  width: 100%;
+  
+  cursor: pointer;
+}
+
+.Name-Price{
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pName {
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+.pPrice {
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+.description {
+  font-size: 14px;
+  margin-top: 8px;
+  color: rgba(46, 46, 46, 0.623);
+}
+
+#container .card .Add-btn {
+  width: 100%;
+  /* width: 330px; */
+  border: 1.5px solid black;
+  padding: 3% 0;
+  border-top: none;
+  border-left: none;
+  cursor: pointer;
+
+  margin-top: 5px;
+} 
+#container .card>div:nth-child(3){
+  width: 95%;
+}
+#container .card .Add-btn:hover{
+  border: 1px dashed black;
+}
+#sort_filter {
+  padding: 15px;
+  margin-bottom: 1.5%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(128, 128, 128, 0.245);
+}
+#sort_filter > #filter > p {
+  cursor: pointer;
+  font-size: 90%;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 4px;
+  color: black;
+}
+
+#sort_filter > #filter > p:hover {
+  background-color: black;
+  color: white;
+}
+
+#filter {
+  display: flex;
+  gap: 13px;
+}
+
+#sort {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#filter_product,
+#sort_product {
+  padding: 6px 15px;
+  font-weight: bold;
+  color: rgba(128, 128, 128, 0.726);
+}
+
+#footer{
+  margin-top: 50px;
+}
+
+
+@media screen and (min-width: 800px) and (max-width: 1006px) {
+  #sort {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 581px) and (max-width: 799px) {
+  #sort {
+    display: none;
+  }
+
+  #container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #sort_filter > #filter > p {
+    cursor: pointer;
+    font-size: 10px;
+    padding: 6px 15px;
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 3px;
+    color: black;
+  }
+}
+
+/* ----max :- 800 */
+
+@media screen and (max-width: 477px) {
+  #sort {
+    display: none;
+  }
+
+  #container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #sort_filter > #filter > p {
+    cursor: pointer;
+    font-size: 10px;
+    padding: 2px 8px;
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 3px;
+    color: black;
+  }
+  #filter {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  .Name-Price > p {
+    font-size: 11px;
+  }
+  .description{
+  font-size: 10px;
+  }
+}
