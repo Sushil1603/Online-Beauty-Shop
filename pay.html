@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +7,18 @@
     <title>payment page</title>
 </head>
 <style>
+     @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
     *{
     font-family: sans-serif;
 }
+.logo{
+        color: rgb(43, 41, 41);  
+        font-weight: bolder; 
+        font-size: 27px;  
+        font-family: "Spartan", sans-serif;    
+    }
 #layout{
     position: fixed;
    width: 100vw;
@@ -254,12 +261,16 @@ hr{
        margin-left: -20px;border: none;
        
     }
+
+
   
 }
 
 </style>
 <body>
-        
+    
+
+
     <div  id="layout">
         <div id="mainbox">
             <div id="left_box" style=" margin-left: 20px; width: 75%; height: 100%;">
@@ -272,7 +283,7 @@ hr{
                           <path id="Path_4" data-name="Path 4" d="M0,59.12V0H1.548L4.419,4.32,4.426,21.7a18.2,18.2,0,0,1,13.86-6.452c3.772-.093,10.359,1.9,13.782,5.739a22.932,22.932,0,0,1,5.969,15.866c0,7.779-2.031,14.2-6.258,18.89S21.7,62.276,14.694,62.276A35.24,35.24,0,0,1,0,59.12M4.436,26.759,4.348,55.922a24.73,24.73,0,0,0,10.079,1.712C19.783,57.634,25.3,56,28.8,52.123c3.08-2.887,5.071-8.949,5.194-14.883A18.918,18.918,0,0,0,29.7,24.6,13.825,13.825,0,0,0,18.667,19.36c-5.052-.066-9.539,1.376-14.231,7.4" transform="translate(0 0.001)" fill="#1a2024"></path>
                         </g>
                       </svg> -->
-                      <h1 style="color: rgb(3, 3, 3); text-shadow: rgb(255, 99, 99) 1px 0 10px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Glossier </h1>
+                      <h1 class="logo">Glossier </h1>
                 </div>
 
                 <div id="nav2"> 
@@ -423,14 +434,15 @@ hr{
                         <div id="bag" style="display: flex;">
                             <img style="width: 20px; height: 20px; margin: 20px 0 20px 70px;" src="https://png.pngtree.com/png-vector/20190507/ourmid/pngtree-vector-list-icon-png-image_1024597.jpg"
                              alt="">
+                            
                              <h3>Total Items:</h3>
                              <span id="Items"   style="margin-top:22px;margin-top:19px;margin-left: 5px; font-size: larger;" > Items :- </span>
                         </div>
                         <div id="price"  style="display: flex;">
-                            <img style="width: 20px; height: 20px; margin: 20px 0 20px 70px;" src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/ic_payment_details-03.svg"
-                             alt="">
+                            <img style="width: 20px; height: 20px; margin: 20px 0 20px 70px;" src="https://w7.pngwing.com/pngs/800/28/png-transparent-scalable-graphics-dollar-sign-icon-dollar-sign-text-trademark-logo-thumbnail.png"
+                            alt="">
                              <h3> Total Price:</h3>
-                             <span id="Grand_total" style="margin-top:19px;margin-left: 5px; font-size: larger;"> ₹ </span>
+                             <span id="Grand_total" style="margin-top:19px;margin-left: 5px; font-size: larger;"> $ </span>
                         </div>
                     </div>
                 
@@ -464,8 +476,9 @@ hr{
 
 </body>
 </html>
+
 <script >
-var dataFromCart = JSON.parse(localStorage.getItem("cart")) || [];
+var dataFromCart = JSON.parse(localStorage.getItem("cartProductArr")) || [];
 // span will append number of products       
 var NumberofItems = dataFromCart.length;
 document.querySelector("#Items").innerHTML = NumberofItems;
@@ -473,11 +486,11 @@ document.querySelector("#Items").innerHTML = NumberofItems;
 
 var totalPrice = 0;
 dataFromCart.forEach(function(product) {
-    totalPrice += (+product.desc);
+    totalPrice += (+product.price);
   });
-document.querySelector("#Grand_total").innerHTML = "₹ " + totalPrice;
+document.querySelector("#Grand_total").innerHTML = "$ " + totalPrice;
 
-document.querySelector("#credit").addEventListener("click", showcredit);
+    document.querySelector("#credit").addEventListener("click", showcredit);
     document.querySelector("#cash").addEventListener("click", showcash);
     
 
@@ -600,8 +613,8 @@ document.querySelector("#credit").addEventListener("click", showcredit);
         document.querySelector("#display_Add").append(div1);     
     }
 
-    var dataFromCart = JSON.parse(localStorage.getItem("cart")) || [];
-    var NumberofItems = localStorage.getItem("cart");
+    var dataFromCart = JSON.parse(localStorage.getItem("cartProductArr")) || [];
+    var NumberofItems = localStorage.getItem("cartProductArr");
 
 
 //   localStorage.setItem("finalPrice", 500);
@@ -616,26 +629,27 @@ document.querySelector("#credit").addEventListener("click", showcredit);
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script type="module">
 
-
-
-    let price = localStorage.getItem("finalPrice") * 100
-
-
+    let price = localStorage.getItem("finalPrice") * 100;
+    price=price*83;
     var options = {
         "key": "rzp_test_gRDqK4ZVKwc1es", // Enter the Key ID generated from the Dashboard
+        // "amount": priceUSD, // Amount is in currency subunits. Default currency is now USD.
+        // "currency": "USD", // Change currency to USD
         "amount": price, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
         "currency": "INR",
-        "name": "Electron",
+        "name": "Glossier",
         "description": "Test Payment",
-        "image": "https://freevector-images.s3.amazonaws.com/uploads/vector/preview/36682/36682.png",
+        "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKcAAACGCAMAAACPOGpNAAAAY1BMVEX///8AAAD7+/v29vbLy8umpqbg4ODo6Oipqak4ODjz8/OXl5dJSUlGRkajo6Pb29ttbW3S0tIsLCxmZmavr6+FhYXAwMCdnZ1/f39cXFwXFxeNjY0iIiJ3d3c+Pj5TU1MMDAyKm1c1AAAEdUlEQVR4nO2a27aqOgyGSal0UkQOBQQ5+f5PuZPClOJ0Ly/WctKLfBcOgaH+pmmapA0ChmEYhmEYhmEYhmEYhvEIJZMur6KjZbwhqlMgyrw5WsofkGdwaKU+WtBranhiTtTRmn4in1VazuHRup5obq9U1o04Wtie6ofGLvFw0hfP1pylbwNOqPvTeBdHK3rNuJfZexqQmp3Ku7chfhfewVuZe3NWT0+Lqy9e0Loy8/0zUf9UfhC7yV7u4npow+rXUcr27BbMi/ukmMEjnYkjM3bMGZn1pic6O0dnu92+luCXztTRuS3p83bTD51huSkathCU+qzTyTYdnacD1W24OvNtGnmnM5he6py90+komrdxz73T6ZRv5TaPWu90umnIVl+O3ulUjs4tzju53uUPH/5FQmdBGh4GTb3Tuas1u3XGy7t/OkO32OyXe27F5IvO4MsRhRWxDqMczjVVxjL3SafeF0hzB/fq21GvHukMip1OKN1IVHukM7i4Mttdl67xSaeT1Jts/0SX12MkvUSs6+S9em7Q6diTenOlwog5JOuFkrJY1/rm7lmzSZ4fQ24b4N1ShOQ3Hzt3lmx11UYEaoTxaDn/yyP3NCMm+54Nu4OTOe9KZd/YLU++dMFe4HRySg93ZjYeDjp7LRPX0XkASEd5tI636EwWntuSYRiGYX4HHUXfGxsqentqQV+rQyqPrJ7jOM5tjiHq8u1JlfGQDqh65Gw1XZXvy5/zozn2i9hWUn5NaPMALRoBJO8+IiH+9cxJGFRpK4keqzRBmbuXxwIagPNS8OgSsDBPoKSaPevbdj0OoJO2XaSf2pb8UiS9bTDJvq1tZySr+yK4jh89RILivstcmwZ3MOlAr/Ul7Q8unbtUk+cSEZkcdRbL5U3ZTmM17Paa/jnqDt2T7nMQostOF2NFCZxlSUc60S/aEYaChkDa803zF/6fUQQG7gOc0092nap12ugMI2img+yG16iQOnInwP+grFUpZE2QohWFNZ8KS7Bdppb+C6otsz/+zF/ztR72aIayLIeGbNWoG8xWewmT0ClMi2N0cLNuihZO6fiFDaFkWxXbSPFRTqvO5IbuhtEmARDV90GVGGJtN70mkkH+eavsNu0onF2FrPlx1uXf87WOu8rQemmI4ziIy2oeEdNIB8UaWakDRg6h6SXedKrq8+akuTst4eRK3ogT3dA7O8ANtZK0IqdAgwlc9qMYhpBcQ0xrl4lCRP0bYf8Oyzp5GshMil4qsDFA4KyPmpnejtA2Bq2NksrwCrcM71BACuRtjIIUDGUEJ/PJtr3dczXLEi/JvFWAxoJOUkS80HZCJ9FpEwyjU1PRDDtDacdhqGgv6az1strTF32y4bhubMTofCG5q9w2ZfDnxbKreVff+3ESvZZMvHbvJ0UZwWXV+VE3VbUxpheNaUXQm5a8Vfd4q17y0Etu8p7GtcnxnsLZZOwxFjkak1NcaExu7Xg1bxOYv+VFwilePH1aF4VnJ5UZhmEYhmEYhmEYhmEYhmH84D8SYC/aEs0FbQAAAABJRU5ErkJggg==",
         // "order_id": "order_Ef80WJDPBmAeNt", //Pass the `id` obtained in the previous step
         // "account_id": "acc_Ef7ArAsdU5t0XL",
         "handler": function (response){
-            alert(response.razorpay_payment_id);
+            // alert(response.razorpay_payment_id);
             // alert(response.razorpay_order_id);
             // alert(response.razorpay_signature)
-            window.location.href = 'index.html';
-            console.log("done")
+            localStorage.removeItem("cartProductArr")
+            localStorage.removeItem("cart")
+            window.location.href = 'thankYou.html';
+           
         }
     };
     var rzp1 = new Razorpay(options);
@@ -659,5 +673,6 @@ document.querySelector("#credit").addEventListener("click", showcredit);
 
     menuToggle.addEventListener('click', () => {
         menu.classList.toggle('active');
-    });
+    });
+
 </script>

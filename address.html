@@ -7,8 +7,25 @@
     <title>address page</title>
 </head>
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
   *{
     font-family: sans-serif;
+}
+.logo{
+        color: rgb(43, 41, 41);  
+        font-weight: bolder; 
+        font-size: 27px;  
+        font-family: "Spartan", sans-serif;    
+    }
+
+#pimg img{
+    width: 100%;
+    border-radius: 10px;
+    max-height: 110px;
+    /* height: 100px; */
 }
 #layout{
     position: fixed;
@@ -245,8 +262,6 @@ form button{
         background-color: white;
     }
     
-   
-   
 }
 
 </style>
@@ -264,7 +279,7 @@ form button{
                           <path id="Path_4" data-name="Path 4" d="M0,59.12V0H1.548L4.419,4.32,4.426,21.7a18.2,18.2,0,0,1,13.86-6.452c3.772-.093,10.359,1.9,13.782,5.739a22.932,22.932,0,0,1,5.969,15.866c0,7.779-2.031,14.2-6.258,18.89S21.7,62.276,14.694,62.276A35.24,35.24,0,0,1,0,59.12M4.436,26.759,4.348,55.922a24.73,24.73,0,0,0,10.079,1.712C19.783,57.634,25.3,56,28.8,52.123c3.08-2.887,5.071-8.949,5.194-14.883A18.918,18.918,0,0,0,29.7,24.6,13.825,13.825,0,0,0,18.667,19.36c-5.052-.066-9.539,1.376-14.231,7.4" transform="translate(0 0.001)" fill="#1a2024"></path>
                         </g>
                       </svg> -->
-                      <h1 style="color: rgb(3, 3, 3); text-shadow: rgb(255, 99, 99) 1px 0 10px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Glossier </h>
+                      <h2 class="logo">Glossier.</h2>
                 </div>
                 <div id="nav2"> 
                     <div style="display: flex;">
@@ -280,7 +295,7 @@ form button{
                 <h2>Shipping Address </h2>
 
                 <div id="add_display">  
-
+<!-- Address box -->
                 </div>
 
 
@@ -340,13 +355,21 @@ form button{
               </div>
 
             </div>
+
             <div id="right_box">
                 <div id="order_sum">
                     <img src="https://www.freepnglogos.com/uploads/shopping-cart-png/shopping-cart-svg-png-icon-download-28.png" alt="">
                      <p>Order summary </p>
                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" id="down"><path fill="#000" d="M5.305 8.306a1.046 1.046 0 0 0 0 1.478l5.904 5.91c.228.228.536.33.834.302.27 0 .539-.101.744-.306l5.907-5.907a1.044 1.044 0 1 0-1.477-1.477l-5.22 5.22-5.216-5.22a1.043 1.043 0 0 0-1.476 0Z"></path></svg>
                      
-                </div>
+            </div>
+
+           <div id="pimg"  style="width: 330px;  height: 100px; margin: 15px;  border-radius: 10px; display: grid; grid-template-columns: repeat(3, 1fr);"  >
+            
+
+           </div>
+           
+
 
 
                 <div id="orderInfo" >
@@ -357,10 +380,13 @@ form button{
                          <span id="Items"   style="margin-top:22px;margin-top:19px;margin-left: 5px; font-size: larger;" > Items :- </span>
                     </div>
                     <div id="price"  style="display: flex;">
-                        <img style="width: 20px; height: 20px; margin: 20px 0 20px 70px;" src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/ic_payment_details-03.svg"
+                        <!-- <img style="width: 20px; height: 20px; margin: 20px 0 20px 70px;" src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/ic_payment_details-03.svg"
+                         alt=""> -->
+                        <img style="width: 20px; height: 20px; margin: 20px 0 20px 70px;" src="https://w7.pngwing.com/pngs/800/28/png-transparent-scalable-graphics-dollar-sign-icon-dollar-sign-text-trademark-logo-thumbnail.png"
                          alt="">
+
                          <h3> Total Price:</h3>
-                         <span id="Grand_total" style="margin-top:19px;margin-left: 5px; font-size: larger;"> ₹ </span>
+                         <span id="Grand_total" style="margin-top:19px;margin-left: 5px; font-size: larger;"> $ </span>
                     </div>
 
                 </div>
@@ -376,7 +402,7 @@ form button{
                          <path d="M3.66693 6.86462H14.3336" stroke="#039855" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                          <path d="M22.3332 6.86462H27.6666C30.6132 6.86462 32.9999 9.2513 32.9999 12.198V19.398H26.3332" stroke="#039855" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                          </svg>
-                     <p>Earliest Delivery by 20 sep, 9 AM</p>
+                     <p>Earliest Delivery by 22 sep, 9 PM</p>
                  </div>
             </div>
             
@@ -389,7 +415,7 @@ form button{
 </html>
 
 <script>
-    const leftSection = document.querySelector('h1');
+    const leftSection = document.querySelector('h2');
     leftSection.addEventListener('mouseenter', () => {
         leftSection.textContent = 'YOU LOOK GOOD';
     });
@@ -403,6 +429,16 @@ form button{
     menuToggle.addEventListener('click', () => {
         menu.classList.toggle('active');
     });
+</script>
+<script>
+let pimg = document.getElementById("pimg");
+let arr = JSON.parse(localStorage.getItem("cartProductArr")); 
+
+// 
+
+
+
+
 </script>
 <script src="./payment.js"> </script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

@@ -90,10 +90,10 @@ if(name === "" || email === "" || phone_no === "" || address === "" || pincode =
             title: 'Oopps!!!🤯 please fill all the details..',
             confirmButtonColor: 'black',
             showClass: {
-              popup: 'animate__animated animate__fadeInDown'
+              popup: 'animate_animated animate_fadeInDown'
             },
             hideClass: {
-              popup: 'animate__animated animate__fadeOutUp'
+              popup: 'animate_animated animate_fadeOutUp'
             }
           })
     }
@@ -138,15 +138,15 @@ var DisplayForm = JSON.parse(localStorage.getItem("Address-data")) || [];
 
 }
 
-var dataFromCart = JSON.parse(localStorage.getItem("cart")) || [];
+var dataFromCart = JSON.parse(localStorage.getItem("cartProductArr")) || [];
 // span will append number of products       
 var NumberofItems = dataFromCart.length;
 document.querySelector("#Items").innerHTML = NumberofItems;
-//  span grand total
+
 
 var totalPrice = 0;
 dataFromCart.forEach(function(product) {
-    totalPrice += (+product.desc);
+    totalPrice += (+product.price);
   });
-  localStorage.setItem("finalPrice", totalPrice);
-document.querySelector("#Grand_total").innerHTML = "₹ " + totalPrice;
+localStorage.setItem("finalPrice", totalPrice);
+document.querySelector("#Grand_total").innerHTML = "$ " + totalPrice;
