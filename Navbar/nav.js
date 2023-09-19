@@ -14,14 +14,19 @@ let cartContainer = document.getElementById("cartContainer")
 let closeCart = document.querySelector("#closeCart")
 let closeNav = document.getElementById("closeNav")
 let openNav = document.querySelector(".mobileIcon")
+let backdrop = document.querySelector(".backdrop")
+
 
 openNav.addEventListener("click", ()=>{
+    backdrop.setAttribute("id" , "show")
+    console.log("back")
     document.querySelector(".mobile-nav").style.display = "flex";
+    
 })
-
 
 closeNav.addEventListener("click", ()=>{
     document.querySelector(".mobile-nav").style.display = "none";
+    backdrop.removeAttribute("id" , "show")
 })
 
 
@@ -30,13 +35,15 @@ closeNav.addEventListener("click", ()=>{
 
 closeCart.addEventListener("click", () => {
     cartContainer.classList.remove("openCart")
-    cartContainer.style.display = "none"
+    // cartContainer.style.display = "none"
+    backdrop.removeAttribute("id" , "show")
 })
 
 
 cartOpenBtn.addEventListener("click", () => {
     cartContainer.classList.add("openCart")
-    cartContainer.style.display = "inline-block"
+    // cartContainer.style.display = "inline-block"
+    backdrop.setAttribute("id" , "show")
 })
 
 

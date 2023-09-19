@@ -25,15 +25,13 @@ main{
     border-bottom: 1px solid rgb(148, 135, 135);
     width: 433px;
     top: 0;
-    z-index: 1000;
+    
 }
 
 #product-list-container {
     display: flex;
     flex-direction: column;
     gap: 15px;
-
-
 }
 
 .crossIcon {
@@ -41,7 +39,6 @@ main{
     margin: 0;
     color: rgb(91, 102, 102) !important;
     cursor: pointer;
-
 }
 
 .crossIcon:hover {
