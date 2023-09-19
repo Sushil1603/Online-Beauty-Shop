@@ -9,9 +9,18 @@
     <title>payment page</title>
 </head>
 <style>
+     @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
     *{
     font-family: sans-serif;
 }
+.logo{
+        color: rgb(43, 41, 41);  
+        font-weight: bolder; 
+        font-size: 27px;  
+        font-family: "Spartan", sans-serif;    
+    }
 #layout{
     position: fixed;
    width: 100vw;
@@ -272,7 +281,7 @@ hr{
                           <path id="Path_4" data-name="Path 4" d="M0,59.12V0H1.548L4.419,4.32,4.426,21.7a18.2,18.2,0,0,1,13.86-6.452c3.772-.093,10.359,1.9,13.782,5.739a22.932,22.932,0,0,1,5.969,15.866c0,7.779-2.031,14.2-6.258,18.89S21.7,62.276,14.694,62.276A35.24,35.24,0,0,1,0,59.12M4.436,26.759,4.348,55.922a24.73,24.73,0,0,0,10.079,1.712C19.783,57.634,25.3,56,28.8,52.123c3.08-2.887,5.071-8.949,5.194-14.883A18.918,18.918,0,0,0,29.7,24.6,13.825,13.825,0,0,0,18.667,19.36c-5.052-.066-9.539,1.376-14.231,7.4" transform="translate(0 0.001)" fill="#1a2024"></path>
                         </g>
                       </svg> -->
-                      <h1 style="color: rgb(3, 3, 3); text-shadow: rgb(255, 99, 99) 1px 0 10px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Glossier </h1>
+                      <h1 class="logo">Glossier </h1>
                 </div>
 
                 <div id="nav2"> 
@@ -423,14 +432,15 @@ hr{
                         <div id="bag" style="display: flex;">
                             <img style="width: 20px; height: 20px; margin: 20px 0 20px 70px;" src="https://png.pngtree.com/png-vector/20190507/ourmid/pngtree-vector-list-icon-png-image_1024597.jpg"
                              alt="">
+                            
                              <h3>Total Items:</h3>
                              <span id="Items"   style="margin-top:22px;margin-top:19px;margin-left: 5px; font-size: larger;" > Items :- </span>
                         </div>
                         <div id="price"  style="display: flex;">
-                            <img style="width: 20px; height: 20px; margin: 20px 0 20px 70px;" src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/DesktopRevamp_icons/ic_payment_details-03.svg"
-                             alt="">
+                            <img style="width: 20px; height: 20px; margin: 20px 0 20px 70px;" src="https://w7.pngwing.com/pngs/800/28/png-transparent-scalable-graphics-dollar-sign-icon-dollar-sign-text-trademark-logo-thumbnail.png"
+                            alt="">
                              <h3> Total Price:</h3>
-                             <span id="Grand_total" style="margin-top:19px;margin-left: 5px; font-size: larger;"> ₹ </span>
+                             <span id="Grand_total" style="margin-top:19px;margin-left: 5px; font-size: larger;"> $ </span>
                         </div>
                     </div>
                 
@@ -464,8 +474,9 @@ hr{
 
 </body>
 </html>
+
 <script >
-var dataFromCart = JSON.parse(localStorage.getItem("cart")) || [];
+var dataFromCart = JSON.parse(localStorage.getItem("cartProductArr")) || [];
 // span will append number of products       
 var NumberofItems = dataFromCart.length;
 document.querySelector("#Items").innerHTML = NumberofItems;
@@ -473,11 +484,11 @@ document.querySelector("#Items").innerHTML = NumberofItems;
 
 var totalPrice = 0;
 dataFromCart.forEach(function(product) {
-    totalPrice += (+product.desc);
+    totalPrice += (+product.price);
   });
-document.querySelector("#Grand_total").innerHTML = "₹ " + totalPrice;
+document.querySelector("#Grand_total").innerHTML = "$ " + totalPrice;
 
-document.querySelector("#credit").addEventListener("click", showcredit);
+    document.querySelector("#credit").addEventListener("click", showcredit);
     document.querySelector("#cash").addEventListener("click", showcash);
     
 
@@ -600,8 +611,8 @@ document.querySelector("#credit").addEventListener("click", showcredit);
         document.querySelector("#display_Add").append(div1);     
     }
 
-    var dataFromCart = JSON.parse(localStorage.getItem("cart")) || [];
-    var NumberofItems = localStorage.getItem("cart");
+    var dataFromCart = JSON.parse(localStorage.getItem("cartProductArr")) || [];
+    var NumberofItems = localStorage.getItem("cartProductArr");
 
 
 //   localStorage.setItem("finalPrice", 500);
@@ -616,15 +627,11 @@ document.querySelector("#credit").addEventListener("click", showcredit);
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script type="module">
 
-
-
     let price = localStorage.getItem("finalPrice") * 100
-
-
     var options = {
         "key": "rzp_test_gRDqK4ZVKwc1es", // Enter the Key ID generated from the Dashboard
-        "amount": price, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-        "currency": "INR",
+        "amount": priceUSD, // Amount is in currency subunits. Default currency is now USD.
+        "currency": "USD", // Change currency to USD
         "name": "Electron",
         "description": "Test Payment",
         "image": "https://freevector-images.s3.amazonaws.com/uploads/vector/preview/36682/36682.png",
@@ -660,4 +667,5 @@ document.querySelector("#credit").addEventListener("click", showcredit);
     menuToggle.addEventListener('click', () => {
         menu.classList.toggle('active');
     });
+
 </script>
