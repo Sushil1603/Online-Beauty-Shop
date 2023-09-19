@@ -1,0 +1,51 @@
+body{
+    background-color: whitesmoke;
+  }
+  .parent {
+    width: 500px;
+    margin:auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid rgb(209, 208, 208);
+    background-color: white
+    
+  }
+
+  .child {
+    margin-bottom: 24px;
+  }
+
+  .child label {
+    /* converting label as block level element */
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-style: normal;
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+  }
+
+  .child input {
+    width: 90%;
+    padding: 20px;
+    border: 1px solid rgb(146, 140, 140);
+    border-radius: 4px;
+  }
+
+  button {
+    width: 97%;
+    color: azure;
+    padding: 20px;
+    border: 1px solid rgb(146, 140, 140);
+    cursor: pointer;
+    background-color: rgb(34, 34, 34);
+  }
+
+  button:hover {
+    background-color: rgb(94, 145, 165)
+  }
+  div>button>a{
+    color: azure;
+  }
