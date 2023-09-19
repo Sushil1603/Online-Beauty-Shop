@@ -627,11 +627,14 @@ document.querySelector("#Grand_total").innerHTML = "$ " + totalPrice;
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script type="module">
 
-    let price = localStorage.getItem("finalPrice") * 100
+    let price = localStorage.getItem("finalPrice") * 100;
+    price=price*83;
     var options = {
         "key": "rzp_test_gRDqK4ZVKwc1es", // Enter the Key ID generated from the Dashboard
-        "amount": priceUSD, // Amount is in currency subunits. Default currency is now USD.
-        "currency": "USD", // Change currency to USD
+        // "amount": priceUSD, // Amount is in currency subunits. Default currency is now USD.
+        // "currency": "USD", // Change currency to USD
+        "amount": price, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+        "currency": "INR",
         "name": "Electron",
         "description": "Test Payment",
         "image": "https://freevector-images.s3.amazonaws.com/uploads/vector/preview/36682/36682.png",

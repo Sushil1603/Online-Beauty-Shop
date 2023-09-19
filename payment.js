@@ -150,3 +150,5 @@ dataFromCart.forEach(function(product) {
   });
 localStorage.setItem("finalPrice", totalPrice);
 document.querySelector("#Grand_total").innerHTML = "$ " + totalPrice;
+  
+
