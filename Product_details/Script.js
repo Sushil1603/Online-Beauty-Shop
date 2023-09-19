@@ -36,6 +36,18 @@ let data = [
     price: 14,
     type: "Cleanser",
   },
+  {
+    id: 11,
+    Name: "Balm Dotcom Trio",
+    content: "Choose three balms",
+    ProdImg:
+      "/Product-Page/Images/Balm-dotcom-trio/glossier-bdctrio-carousel-01.avif",
+    actor:
+      "/Product-Page/Images/Balm-dotcom-trio/glossier-bdctrio-carousel-02.avif",
+    price: 36,
+    type: "balm",
+    skin: "Dry",
+  },
 ];
 
 let container = document.querySelector("#container");
